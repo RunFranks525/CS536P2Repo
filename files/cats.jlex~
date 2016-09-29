@@ -59,17 +59,17 @@ class CharNum {
 
 DIGIT =        [0-9]
 WHITESPACE =   [\040\t]
-RESERVEDWORD = ["bool"|"int"|"void"|"true"|"false"|"struct"|"cin"|"cout"|"if"|"else"|"while"|"return"]
+RESERVEDWORD = [(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return)]
 //TODO: regex for ID's (variable names)
-IDENTIFIER =   []
+IDENTIFIER =   [[(a-z)(A-Z)_][(a-z)(A-Z)(0-9)_]*]
 //TODO: regex for valid String's
-STRING =       []
-//TODO: Comments macro
-COMMENTS =     [("//"[^\n]*\n)|("#"[^\n]*\n)]
-//TODO: Illegal Character macro
-ILLEGALS =     []
-//TODO: Check Expression
-SYMBOLS =      ["{"|"}"|"("|")"|";"|","|"."|"<<"|">>"|"++"|"--"|"+"|"-"|"*"|"/"|"!"|"&&"|"||"|"=="|"!="|"<"|">"|"<="|">="|"="]
+STRING =       [\"([^\n\"\/]|(\\[nt\'\"\?\\]))*\"]
+//Comments macro
+COMMENT =     [((//)[^\n]*\n)|((#)[^\n]*\n)]
+//TODO: Illegal Character macro  ??
+//ILLEGALS =     []
+//TODO:Check Expression
+SYMBOLS =      [\{|\}|\(|\)|;|,|\.|(<<)|(>>)|(++)|(--)|\+|-|\*|/|!|(&&)|(\|\|)|(==)|(!=)|<|>|(<=)|(>=)|=]
 
 
 
@@ -169,6 +169,8 @@ return new Symbol(sym.EOF);
 
 //Pattern for String Literals (any sequence of 0 or more String characters)
 {STRING}  {
+		//TODO: Unterminated String Literals
+		//TODO: Bad String Literals
 		String val = yyText().toString();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, strLitTokenVal);
@@ -177,8 +179,9 @@ return new Symbol(sym.EOF);
 	  }
 
 //Pattern for Integer Literals (any sequence of 1 or more digits)
-{DIGIT}+  { // NOTE: the following computation of the integer value does NOT
+{DIGIT}+  { // TODO: the following computation of the integer value does NOT
             //       check for overflow.  This must be changed.
+	    //(Bad Integer Literals)
             	int val = (new Integer(yytext())).intValue();
 		IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
             	Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
@@ -188,17 +191,13 @@ return new Symbol(sym.EOF);
 
 \n        { CharNum.num = 1; }
 
+//Pattern for Whitespace
 {WHITESPACE}+  { CharNum.num += yytext().length(); }
 
-{COMMENT} {
-		String val = yytext().toString();
-		TokenVal commentToken = new TokenVal(yyline+1, CharNum.num, val);
-		Symbol symbol = new Symbol(sym.COMMENT, commentToken);
-		CharNum.num += yytext().length();
-		return symbol;
-	  }
+//Pattern for Comments
+{COMMENT} { CharNum.num = 1; }
 
-//TODO: Pattern for all one- or two-character symbols
+//Pattern for all one- or two-character symbols
 {SYMBOLS} { Symbol S = null; 
 	    switch(reservedSymbol){
 		case "{":
@@ -236,14 +235,14 @@ return new Symbol(sym.EOF);
 			S = new Symbol(sym.DOT,  reservedWordToken);
 			CharNum.num++;
 			break;
-		case "<<": //WHICH KEYWORD IS THIS?
+		case "<<": 
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.,  reservedWordToken);
+			S = new Symbol(sym.WRITE,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
-		case ">>": //WHICH KEYWORD IS THIS?
+		case ">>": 
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.,  reservedWordToken);
+			S = new Symbol(sym.READ,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "++":
@@ -332,10 +331,15 @@ return new Symbol(sym.EOF);
             return S;
           }
 
+//Pattern for Illegal Characters
+//{ILLEGALS}+ {
+//		ErrMsg.fatal("illegal character ignored: " + yytext());
+//		CharNum.num++;
+//	   }
 
 
 //If we havent caught the token yet, program fails     
 .         { ErrMsg.fatal(yyline+1, CharNum.num,
-                         "ignoring illegal character: " + yytext());
+                         "illegal character ignored: " + yytext());
             CharNum.num++;
           }
