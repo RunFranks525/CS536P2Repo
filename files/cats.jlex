@@ -55,20 +55,20 @@ class CharNum {
     static int num=1;
 }
 %%
-//-----------------------------------------------------------------------------------------------
 
-DIGIT =        [0-9]
+
+DIGIT=        [0-9]
+
 WHITESPACE =   [\040\t]
+
 RESERVEDWORD = [(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return)]
-//TODO: regex for ID's (variable names)
-IDENTIFIER =   [[(a-z)(A-Z)_][(a-z)(A-Z)(0-9)_]*]
-//TODO: regex for valid String's
+
+IDENTIFIER =   [((a-z)(A-Z)_)|((a-z)(A-Z)(0-9)_)*]
+
 STRING =       [\"([^\n\"\/]|(\\[nt\'\"\?\\]))*\"]
-//Comments macro
+
 COMMENT =     [((//)[^\n]*\n)|((#)[^\n]*\n)]
-//TODO: Illegal Character macro  ??
-//ILLEGALS =     []
-//TODO:Check Expression
+
 SYMBOLS =      [\{|\}|\(|\)|;|,|\.|(<<)|(>>)|(\+\+)|(--)|\+|-|\*|/|!|(&&)|(\|\|)|(==)|(!=)|<|>|(<=)|(>=)|=]
 
 
@@ -84,9 +84,7 @@ return new Symbol(sym.EOF);
 %line
 
 %%
-//------------------------------------------------------------------------------------------------
 
-//Pattern for Reserved Words
 {RESERVEDWORD} {
 		String reservedWord = yytext().toString();
 		Symbol S = null;
@@ -158,16 +156,6 @@ return new Symbol(sym.EOF);
 		return S;				
 	}
 
-//Pattern for Identifiers (variable names)
-{IDENTIFIER} {	
-		String val = yyText().toString();
-		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, IdTokenVal);
-		CharNum.num += yytext().length();
-		return S;
-	     }
-
-//Pattern for String Literals (any sequence of 0 or more String characters)
 {STRING}  {
 		//TODO: Unterminated String Literals
 		//TODO: Bad String Literals
@@ -178,11 +166,18 @@ return new Symbol(sym.EOF);
 		return S;
 	  }
 
-//Pattern for Integer Literals (any sequence of 1 or more digits)
-{DIGIT}+  { // TODO: check if overflow error message is correct
-	    //(Bad Integer Literals)
-            	int val = (new Integer(yytext())).intValue();
-		if(val > Integer.MAX_VALUE){
+
+{IDENTIFIER} {	
+		String val = yyText().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, IdTokenVal);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+
+{DIGIT}+  { 
+            	int val = (new Integer(yytext())).intValue(); // if int overflows -- this may crash before the if check
+		if((val > 0 && val <= Integer.MAX_VALUE) && (val < 0 && val >= Integer.MIN_VALUE)){
 			ErrMsg.fatal(yyline+1, CharNum.num,
                          "integer overflow, exceeds " + Integer.MAX_VALUE);
             		CharNum.num += yytext().length();
@@ -195,15 +190,16 @@ return new Symbol(sym.EOF);
 
 \n        { CharNum.num = 1; }
 
-//Pattern for Whitespace
+
+
 {WHITESPACE}+  { CharNum.num += yytext().length(); }
 
-//Pattern for Comments
+
 {COMMENT} { CharNum.num = 1; }
 
-//Pattern for all one- or two-character symbols
+
 {SYMBOLS} { Symbol S = null; 
-	    switch(reservedSymbol){
+	    switch(reservedSymbol) {
 		case "{":
 			TokenVal symbolToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.LCURLY,  reservedWordToken);
@@ -334,13 +330,6 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-
-//Pattern for Illegal Characters
-//{ILLEGALS}+ {
-//		ErrMsg.fatal("illegal character ignored: " + yytext());
-//		CharNum.num++;
-//	   }
-
 
 //If we havent caught the token yet, program fails     
 .         { ErrMsg.fatal(yyline+1, CharNum.num,
