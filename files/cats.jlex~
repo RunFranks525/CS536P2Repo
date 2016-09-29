@@ -55,9 +55,15 @@ class CharNum {
     static int num=1;
 }
 %%
+//-----------------------------------------------------------------------------------------------
 
 DIGIT=        [0-9]
 WHITESPACE=   [\040\t]
+RESERVEDWORD= [(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return)]
+IDENTIFIER=   []
+STRING=       []
+
+
 
 %implements java_cup.runtime.Scanner
 %function next_token
@@ -70,19 +76,28 @@ return new Symbol(sym.EOF);
 %line
 
 %%
+//------------------------------------------------------------------------------------------------
 
 //TODO: Pattern for Reserved Words
-{}
+{RESERVEDWORD} {
+		int val = (new Integer(yytext())).intValue();
+		
+				
+		}
 
-//TODO: Pattern for Identifiers (variable names?)
-{}
+//TODO: Pattern for Identifiers (variable names)
+{IDENTIFIER} {
+		
+	     }
 
-//TODO: Pattern for Integer Literals (any sequence of 1 or more digits)
-{}
+
 
 //TODO: Patter for String Literals (any sequence of 0 or more String characters)
-{}
+{STRING}  {
 
+	  }
+
+//Pattern for Integer Literals (any sequence of 1 or more digits)
 {DIGIT}+  { // NOTE: the following computation of the integer value does NOT
             //       check for overflow.  This must be changed.
             int val = (new Integer(yytext())).intValue();

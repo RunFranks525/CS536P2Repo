@@ -10,7 +10,7 @@ import java_cup.runtime.*;  // defines Symbol
  */
 public class P2 {
     public static void main(String[] args) throws IOException {
-        // exception may be thrown by yylex
+                                           // exception may be thrown by yylex
         // test all tokens
         testAllTokens();
         CharNum.num = 1;
@@ -50,7 +50,7 @@ public class P2 {
             case sym.BOOL:
                 outFile.println("bool"); 
                 break;
-	    case sym.INT:
+			case sym.INT:
                 outFile.println("int");
                 break;
             case sym.VOID:
@@ -167,8 +167,8 @@ public class P2 {
 			case sym.ASSIGN:
                 outFile.println("=");
                 break;
-	   default:
-		outFile.println("UNKNOWN TOKEN");
+			default:
+				outFile.println("UNKNOWN TOKEN");
             } // end switch
 
             token = scanner.next_token();

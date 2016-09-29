@@ -57,11 +57,19 @@ class CharNum {
 %%
 //-----------------------------------------------------------------------------------------------
 
-DIGIT=        [0-9]
-WHITESPACE=   [\040\t]
-RESERVEDWORD= [(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return)]
-IDENTIFIER=   []
-STRING=       []
+DIGIT =        [0-9]
+WHITESPACE =   [\040\t]
+RESERVEDWORD = ["bool"|"int"|"void"|"true"|"false"|"struct"|"cin"|"cout"|"if"|"else"|"while"|"return"]
+//TODO: regex for ID's (variable names)
+IDENTIFIER =   []
+//TODO: regex for valid String's
+STRING =       []
+//TODO: Comments macro
+COMMENTS =     [("//"[^\n]*\n)|("#"[^\n]*\n)]
+//TODO: Illegal Character macro
+ILLEGALS =     []
+//TODO: Check Expression
+SYMBOLS =      ["{"|"}"|"("|")"|";"|","|"."|"<<"|">>"|"++"|"--"|"+"|"-"|"*"|"/"|"!"|"&&"|"||"|"=="|"!="|"<"|">"|"<="|">="|"="]
 
 
 
@@ -78,44 +86,255 @@ return new Symbol(sym.EOF);
 %%
 //------------------------------------------------------------------------------------------------
 
-//TODO: Pattern for Reserved Words
+//Pattern for Reserved Words
 {RESERVEDWORD} {
-		int val = (new Integer(yytext())).intValue();
-		
-				
+		String reservedWord = yytext().toString();
+		Symbol S = null;
+		switch(reservedWord){
+		   case "bool":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.BOOL,  reservedWordToken);
+			CharNum.num += yytext().length();	
+			break;
+		   case "int":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.INT,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "void":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.VOID,  reservedWordToken);
+			CharNum.num += yytext().length();		
+			break:
+		   case "true":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TRUE,  reservedWordToken);
+			CharNum.num += yytext().length();	
+			break;
+		   case "false":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.FALSE,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "struct":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.STRUCT,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "cin":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.CIN,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "cout":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COUT,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "if":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.IF,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "else":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ELSE,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "while":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.BOOL,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "return":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RETURN,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   default:
+			break;
+			
 		}
+		return S;				
+	}
 
-//TODO: Pattern for Identifiers (variable names)
-{IDENTIFIER} {
-		
+//Pattern for Identifiers (variable names)
+{IDENTIFIER} {	
+		String val = yyText().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, IdTokenVal);
+		CharNum.num += yytext().length();
+		return S;
 	     }
 
-
-
-//TODO: Patter for String Literals (any sequence of 0 or more String characters)
+//Pattern for String Literals (any sequence of 0 or more String characters)
 {STRING}  {
-
+		String val = yyText().toString();
+		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, strLitTokenVal);
+		CharNum.num += yytext().length();
+		return S;
 	  }
 
 //Pattern for Integer Literals (any sequence of 1 or more digits)
 {DIGIT}+  { // NOTE: the following computation of the integer value does NOT
             //       check for overflow.  This must be changed.
-            int val = (new Integer(yytext())).intValue();
-            Symbol S = new Symbol(sym.INTLITERAL,
-                             new IntLitTokenVal(yyline+1, CharNum.num, val));
-            CharNum.num += yytext().length();
-            return S;
+            	int val = (new Integer(yytext())).intValue();
+		IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
+            	Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
+            	CharNum.num += yytext().length();
+            	return S;
           }
 
 \n        { CharNum.num = 1; }
 
 {WHITESPACE}+  { CharNum.num += yytext().length(); }
 
-"+"       { Symbol S = new Symbol(sym.PLUS, new TokenVal(yyline+1, CharNum.num));
-            CharNum.num++;
+{COMMENT} {
+		String val = yytext().toString();
+		TokenVal commentToken = new TokenVal(yyline+1, CharNum.num, val);
+		Symbol symbol = new Symbol(sym.COMMENT, commentToken);
+		CharNum.num += yytext().length();
+		return symbol;
+	  }
+
+//TODO: Pattern for all one- or two-character symbols
+{SYMBOLS} { Symbol S = null; 
+	    switch(reservedSymbol){
+		case "{":
+			TokenVal symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  reservedWordToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "(":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  reservedWordToken);
+			CharNum.num++;		
+			break:
+		case ")":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  reservedWordToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case ",":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  reservedWordToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "<<": //WHICH KEYWORD IS THIS?
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": //WHICH KEYWORD IS THIS?
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "-":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "*":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  reservedWordToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "!":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  reservedWordToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  reservedWordToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  reservedWordToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
             return S;
           }
-        
+
+
+
+//If we havent caught the token yet, program fails     
 .         { ErrMsg.fatal(yyline+1, CharNum.num,
                          "ignoring illegal character: " + yytext());
             CharNum.num++;
