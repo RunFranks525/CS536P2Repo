@@ -11,19 +11,28 @@ import java_cup.runtime.*;  // defines Symbol
  */
 public class P2 {
     public static void main(String[] args) throws IOException {
-
+	//Test all tokens
         testAllTokens();
         CharNum.num = 1;
+	//Test bad tokens
 	testBadInput();
 	CharNum.num = 1;
+	//Test empty tokens
 	testEmptyFile();
 	CharNum.num = 1;
+	//Test ignored tokens
 	testIgnoredInput();
 	CharNum.num = 1;
+	//Test Character Numbers
 	testCharacterNumbers();
 	CharNum.num = 1;
     }
 
+    /**
+     * testCharacterNumbers tests the charnum and linenum of the scanner over the given tokens
+     * from an input file, allTokens.in. This writes the expected output to allTokens.out
+     * and compares those values against the stored tokens originally read.
+     */
     private static void testCharacterNumbers() throws IOException{
 	FileReader inFile = null;
         PrintWriter outFile = null;
@@ -200,6 +209,12 @@ public class P2 {
 
     }
 
+    /*
+     * testIgnoredInput tests ignored input tokens such as comments and ensures that they are not 
+     * written towards an output file. If so, the output file will display a success message and
+     * we can verify this be running a diff command upon an expected output file and and intermediary
+     * file that we created
+     */
     private static void testIgnoredInput() throws IOException{
 	FileReader inFile = null;
 	FileReader intermediaryFile = null;
@@ -233,6 +248,9 @@ public class P2 {
 	    outFile.close();
     }
 
+    /*
+     * testEmptyFile is a function that ensures that no tokens besides and EOF token is read for an empty file
+     */
     private static void testEmptyFile() throws IOException{
 	FileReader inFile = null;
 	try{
@@ -248,155 +266,32 @@ public class P2 {
 		System.err.println("Try to read non-existent symbols from emptyFile.in");
 	}
     }
+
+    /*
+     * testBadInput tests badInput values and displays the correct error message to an error message file
+     * called errors.txt
+     * checks for invaled input
+     */
     private static void testBadInput() throws IOException{
 	FileReader inFile = null;
         PrintWriter outFile = null;
 
 
-	/////Set error statements to go to a new filestream (instead of System.err)
+	//Set error statements to go to a new filestream (instead of System.err)
 	System.setErr(new PrintStream(new FileOutputStream("errors.txt")));	
 	
         try {
             inFile = new FileReader("badTokens.in");
-            outFile = new PrintWriter(new FileWriter("badTokens.out"));
         } catch (FileNotFoundException ex) {
             System.err.println("File allTokens.in not found.");
             System.exit(-1);
-        } catch (IOException ex) {
-            System.err.println("allTokens.out cannot be opened.");
-            System.exit(-1);
         }
-
 	Yylex scanner = new Yylex(inFile); //Needs an input file with bad input
 	Symbol badToken = scanner.next_token();
 	while(badToken.sym != sym.EOF){
-		switch (badToken.sym) {
-            case sym.BOOL:
-                outFile.println("bool"); 
-                break;
-	    case sym.INT:
-                outFile.println("int");
-                break;
-            case sym.VOID:
-                outFile.println("void");
-                break;
-            case sym.TRUE:
-                outFile.println("true"); 
-                break;
-            case sym.FALSE:
-                outFile.println("false"); 
-                break;
-            case sym.STRUCT:
-                outFile.println("struct"); 
-                break;
-            case sym.CIN:
-                outFile.println("cin"); 
-                break;
-            case sym.COUT:
-                outFile.println("cout");
-                break;				
-            case sym.IF:
-                outFile.println("if");
-                break;
-            case sym.ELSE:
-                outFile.println("else");
-                break;
-            case sym.WHILE:
-                outFile.println("while");
-                break;
-            case sym.RETURN:
-                outFile.println("return");
-                break;
-            case sym.ID:
-                outFile.println(((IdTokenVal)badToken.value).idVal);
-                break;
-            case sym.INTLITERAL:
-                outFile.println(((IntLitTokenVal)badToken.value).intVal);
-                break;
-            case sym.STRINGLITERAL:
-                outFile.println(((StrLitTokenVal)badToken.value).strVal);
-                break;    
-            case sym.LCURLY:
-                outFile.println("{");
-                break;
-            case sym.RCURLY:
-                outFile.println("}");
-                break;
-            case sym.LPAREN:
-                outFile.println("(");
-                break;
-            case sym.RPAREN:
-                outFile.println(")");
-                break;
-            case sym.SEMICOLON:
-                outFile.println(";");
-                break;
-            case sym.COMMA:
-                outFile.println(",");
-                break;
-            case sym.DOT:
-                outFile.println(".");
-                break;
-            case sym.WRITE:
-                outFile.println("<<");
-                break;
-            case sym.READ:
-                outFile.println(">>");
-                break;				
-            case sym.PLUSPLUS:
-                outFile.println("++");
-                break;
-            case sym.MINUSMINUS:
-                outFile.println("--");
-                break;	
-            case sym.PLUS:
-                outFile.println("+");
-                break;
-            case sym.MINUS:
-                outFile.println("-");
-                break;
-            case sym.TIMES:
-                outFile.println("*");
-                break;
-            case sym.DIVIDE:
-                outFile.println("/");
-                break;
-            case sym.NOT:
-                outFile.println("!");
-                break;
-            case sym.AND:
-                outFile.println("&&");
-                break;
-            case sym.OR:
-                outFile.println("||");
-                break;
-            case sym.EQUALS:
-                outFile.println("==");
-                break;
-            case sym.NOTEQUALS:
-                outFile.println("!=");
-                break;
-            case sym.LESS:
-                outFile.println("<");
-                break;
-            case sym.GREATER:
-                outFile.println(">");
-                break;
-            case sym.LESSEQ:
-                outFile.println("<=");
-                break;
-            case sym.GREATEREQ:
-                outFile.println(">=");
-                break;
-	    case sym.ASSIGN:
-                outFile.println("=");
-                break;
-	   default:
-		outFile.println("UNKNOWN TOKEN");
-            } // end switch
-	badToken = scanner.next_token();
+		badToken = scanner.next_token();
 	}
-	outFile.close();
+
     }
 
     /**
