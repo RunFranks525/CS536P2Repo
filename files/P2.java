@@ -114,10 +114,10 @@ public class P2 {
             case sym.ID:
                 outFile.println(((IdTokenVal)token.value).idVal);
                 break;
-            case sym.INTLITERAL:  
+            case sym.INTLITERAL:
                 outFile.println(((IntLitTokenVal)token.value).intVal);
                 break;
-            case sym.STRINGLITERAL: 
+            case sym.STRINGLITERAL:
                 outFile.println(((StrLitTokenVal)token.value).strVal);
                 break;    
             case sym.LCURLY:
@@ -192,7 +192,7 @@ public class P2 {
             case sym.GREATEREQ:
                 outFile.println(">=");
                 break;
-			case sym.ASSIGN:
+	    case sym.ASSIGN:
                 outFile.println("=");
                 break;
 	   default:

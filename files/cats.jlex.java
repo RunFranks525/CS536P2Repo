@@ -261,17 +261,23 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 7 */ YY_NO_ANCHOR,
 		/* 8 */ YY_NO_ANCHOR,
 		/* 9 */ YY_NO_ANCHOR,
-		/* 10 */ YY_NO_ANCHOR
+		/* 10 */ YY_NO_ANCHOR,
+		/* 11 */ YY_NOT_ACCEPT,
+		/* 12 */ YY_NO_ANCHOR,
+		/* 13 */ YY_NO_ANCHOR,
+		/* 14 */ YY_NO_ANCHOR,
+		/* 15 */ YY_NOT_ACCEPT
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"8:9,5,2,8:2,0,8:18,5,7,2,6,8:2,7,2,1:2,2,7:4,2,4:10,8,7:4,2,8,3:26,2:4,3,8," +
-"1:6,3,1:2,3:2,1,3,1:2,3:2,1:6,3:3,7,1,7,8:2,9:2")[0];
+"5:9,9,8,5:2,3,5:18,9,12,2,10,5:2,12,5,1:2,6,12:4,11,7:10,5,12:4,5:2,6:26,10" +
+",4,10:2,6,5,1:6,6,1:2,6:2,1,6,1:2,6:2,1:6,6:3,12,1,12,5:2,0:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,11,
-"0,1:3,2,1:4,3:2")[0];
+	private int yy_rmap[] = unpackFromString(1,16,
+"0,1:2,2,1:2,3,1:3,4,2,1,4,2,5")[0];
 
-	private int yy_nxt[][] = unpackFromString(4,10,
-"-1,1,2,3,10,4,5,6,7,8,-1:15,4,-1:8,9,-1:5");
+	private int yy_nxt[][] = unpackFromString(6,13,
+"1,2,3,-1,12:2,4,13,5,6,7:2,8,-1:14,11,9,11,15,11:3,-1,11:2,-1,11,-1:9,6,-1:" +
+"10,10,-1:6,11,14,11,15,11:3,-1,11:2,-1,11");
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -319,6 +325,10 @@ return new Symbol(sym.EOF);
 					yy_to_mark();
 					switch (yy_last_accept_state) {
 					case 1:
+						
+					case -2:
+						break;
+					case 2:
 						{
 		String reservedWord = yytext().toString();
 		Symbol S = null;
@@ -389,18 +399,16 @@ return new Symbol(sym.EOF);
 		}
 		return S;				
 	}
-					case -2:
-						break;
-					case 2:
-						{String val = yytext().toString();
-		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, strLitToken);
-		CharNum.num += yytext().length();
-		return S;
-	  }
 					case -3:
 						break;
 					case 3:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -4:
+						break;
+					case 4:
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -408,10 +416,6 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-					case -4:
-						break;
-					case 4:
-						{ CharNum.num += yytext().length(); }
 					case -5:
 						break;
 					case 5:
@@ -419,6 +423,14 @@ return new Symbol(sym.EOF);
 					case -6:
 						break;
 					case 6:
+						{ CharNum.num += yytext().length(); }
+					case -7:
+						break;
+					case 7:
+						{ CharNum.num = 1; }
+					case -8:
+						break;
+					case 8:
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -554,20 +566,19 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-					case -7:
-						break;
-					case 7:
-						{ ErrMsg.fatal(yyline+1, CharNum.num,
-                         "illegal character ignored: " + yytext());
-            CharNum.num++;
-          }
-					case -8:
-						break;
-					case 8:
-						
 					case -9:
 						break;
 					case 9:
+						{	
+		String val = yytext();
+		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.STRINGLITERAL, strLitToken);
+		CharNum.num += yytext().length();
+		return S;
+	  }
+					case -10:
+						break;
+					case 10:
 						{ 
             	int val = (new Integer(yytext())).intValue(); // if int overflows -- this may crash before the if check
 		if((val > 0 && val <= Integer.MAX_VALUE) && (val < 0 && val >= Integer.MIN_VALUE)){
@@ -580,9 +591,16 @@ return new Symbol(sym.EOF);
             	CharNum.num += yytext().length();
             	return S;
           }
-					case -10:
+					case -11:
 						break;
-					case 10:
+					case 12:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -12:
+						break;
+					case 13:
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -590,7 +608,17 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-					case -11:
+					case -13:
+						break;
+					case 14:
+						{	
+		String val = yytext();
+		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.STRINGLITERAL, strLitToken);
+		CharNum.num += yytext().length();
+		return S;
+	  }
+					case -14:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);
