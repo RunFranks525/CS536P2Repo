@@ -1,7 +1,11 @@
 123
 +
 x
-hello = my + world
+hello
+=
+my
++
+world
 ;
 {
 }
