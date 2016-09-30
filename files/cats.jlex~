@@ -82,11 +82,11 @@ return new Symbol(sym.EOF);
 %%
 
 (bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return) {
-<<<<<<< HEAD
-		String reservedWord = yytext().toString();
-=======
+
+
+
 		String reservedWord = yytext();
->>>>>>> Did some fuckin poo poo stuff
+
 		Symbol S = null;
 		TokenVal reservedWordToken = null;
 		switch (reservedWord) {
@@ -156,7 +156,7 @@ return new Symbol(sym.EOF);
 		return S;				
 	}
 
-(\"([^\n\"\/]|(\\[nt\'\"\?\\]))*\")  {	
+(\"([^\n\"\/\\]|(\\[nt\'\"\?\\]))*\")  {	
 		String val = yytext();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.STRINGLITERAL, strLitToken);
@@ -164,18 +164,28 @@ return new Symbol(sym.EOF);
 		return S;
 	  }
 
-(\"([^\n\"\/]|(\\[nt\'\"\?\\]))*(\n|\Z))  {	
+(\"([^\n\"\/\\]|(\\[^nt\'\"\?\\\n]))*\")  {	
+		ErrMsg.fatal(yyline+1, CharNum.num,
+                         "string literal with bad escaped character ignored");
+            		CharNum.num += yytext().length();
+	  }
+
+(\"([^\n\"\/\\]|(\\[^nt\'\"\?\\\n]))*(\n))  {	
 		ErrMsg.fatal(yyline+1, CharNum.num,
                          "unterminated string literal ignored");
             		CharNum.num += yytext().length();
 	  }
 
-<<<<<<< HEAD
+(\"([^\n\"\/\\]|(\\[nt\'\"\?\\]))*(\n|\\))  {	
+		ErrMsg.fatal(yyline+1, CharNum.num,
+                         "unterminated string literal with bad escaped character ignored");
+            		CharNum.num += yytext().length();
+	  }
+
+
+
 
 ([a-z]|[A-Z]|_)([a-z]|[A-Z]|[0-9]|_)* {	
-=======
-([a-z]|[A-Z]|_)|([a-z]|[A-Z]|[0-9]|_)* {	
->>>>>>> Did some fuckin poo poo stuff
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, idToken);
@@ -187,7 +197,7 @@ return new Symbol(sym.EOF);
             	double bigVal = (new Double(yytext())).doubleValue();
 			System.out.println("fuck you");
 		if(bigVal > Integer.MAX_VALUE) {
-			ErrMsg.fatal(yyline+1, CharNum.num,
+			ErrMsg.warn(yyline+1, CharNum.num,
                          "integer overflow, exceeds " + Integer.MAX_VALUE);
             		CharNum.num += yytext().length();
 		} else{
