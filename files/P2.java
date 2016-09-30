@@ -2,6 +2,7 @@ import java.util.*;
 import java.io.*;
 import java_cup.runtime.*;  // defines Symbol
 
+
 /**
  * This program is to be used to test the Scanner.
  * This version is set up to test all tokens, but more code is needed to test 
@@ -10,6 +11,7 @@ import java_cup.runtime.*;  // defines Symbol
  */
 public class P2 {
     public static void main(String[] args) throws IOException {
+
         testAllTokens();
         CharNum.num = 1;
 	testBadInput();
@@ -109,6 +111,11 @@ public class P2 {
     private static void testBadInput() throws IOException{
 	FileReader inFile = null;
         PrintWriter outFile = null;
+
+
+	/////Set error statements to go to a new filestream (instead of System.err)
+	System.setErr(new PrintStream(new FileOutputStream("errors.txt")));	
+	
         try {
             inFile = new FileReader("badTokens.in");
             outFile = new PrintWriter(new FileWriter("badTokens.out"));
