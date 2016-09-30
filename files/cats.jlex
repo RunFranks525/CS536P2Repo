@@ -156,18 +156,18 @@ return new Symbol(sym.EOF);
 		return S;				
 	}
 
-{STRING}  {String val = yyText().toString();
+{STRING}  {String val = yytext().toString();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, strLitTokenVal);
+		Symbol S = new Symbol(sym.ID, strLitToken);
 		CharNum.num += yytext().length();
 		return S;
 	  }
 
 
 {IDENTIFIER} {	
-		String val = yyText().toString();
+		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, IdTokenVal);
+		Symbol S = new Symbol(sym.ID, idToken);
 		CharNum.num += yytext().length();
 		return S;
 	     }
@@ -195,8 +195,10 @@ return new Symbol(sym.EOF);
 {COMMENT} { CharNum.num = 1; }
 
 
-{SYMBOLS} { Symbol S = null;
-	    TokenVal symbolToken; 
+{SYMBOLS} { 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
 	    switch(reservedSymbol) {
 		case "{":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
@@ -274,7 +276,7 @@ return new Symbol(sym.EOF);
 			CharNum.num++;
 			break;
 		case "!":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.NOT,  symbolToken);
 			CharNum.num++;
 			break;

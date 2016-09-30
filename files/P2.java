@@ -21,16 +21,16 @@ public class P2 {
 	//For each, instantiate a new scanner instance, set CharNum.num back to one each time
 	//DON'T FORGET TO INCLUDE CODE THAT TESTS WHETHER THE CORRECT CHARACTER NUMBER (AS WELL AS LINE NUMBER) IS RETURNED FOR EVERY TOKEN
 	//	input that causes errors
-	testBadInput();
+	/*testBadInput();
 	CharNum.num = 1;
 	//	character numbers
 	testCharacterNumbers();
 	CharNum.num = 1;
 	//	values associated with tokens
 	testAssociatedValues();
-	CharNum.num = 1;
+	CharNum.num = 1;*/
     }
-
+/*
     private static void testBadInput(){
 	Yylex scanner = new Yylex(); //Needs an input file with bad input
 	
@@ -43,6 +43,9 @@ public class P2 {
     private static void testAssociatedValues(){
 	Yylex scanner = new Yylex(); //Needs an input file
     }
+
+*/
+
     /**
      * testAllTokens
      *

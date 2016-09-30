@@ -392,9 +392,9 @@ return new Symbol(sym.EOF);
 					case -2:
 						break;
 					case 2:
-						{String val = yyText().toString();
+						{String val = yytext().toString();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, strLitTokenVal);
+		Symbol S = new Symbol(sym.ID, strLitToken);
 		CharNum.num += yytext().length();
 		return S;
 	  }
@@ -402,9 +402,9 @@ return new Symbol(sym.EOF);
 						break;
 					case 3:
 						{	
-		String val = yyText().toString();
+		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, IdTokenVal);
+		Symbol S = new Symbol(sym.ID, idToken);
 		CharNum.num += yytext().length();
 		return S;
 	     }
@@ -419,132 +419,134 @@ return new Symbol(sym.EOF);
 					case -6:
 						break;
 					case 6:
-						{ Symbol S = null;
-	    TokenVal symbolToken; 
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
 	    switch(reservedSymbol) {
 		case "{":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.LCURLY,  reservedWordToken);
+			S = new Symbol(sym.LCURLY,  symbolToken);
 			CharNum.num++;	
 			break;
 		case "}":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.RCURLY,  reservedWordToken);
+			S = new Symbol(sym.RCURLY,  symbolToken);
 			CharNum.num++;
 			break;
 		case "(":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.LPAREN,  reservedWordToken);
+			S = new Symbol(sym.LPAREN,  symbolToken);
 			CharNum.num++;		
 			break;
 		case ")":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.RPAREN,  reservedWordToken);
+			S = new Symbol(sym.RPAREN,  symbolToken);
 			CharNum.num++;	
 			break;
 		case ";":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.SEMICOLON,  reservedWordToken);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
 			CharNum.num++;
 			break;
 		case ",":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.COMMA,  reservedWordToken);
+			S = new Symbol(sym.COMMA,  symbolToken);
 			CharNum.num++;
 		   	break;
 		case ".":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.DOT,  reservedWordToken);
+			S = new Symbol(sym.DOT,  symbolToken);
 			CharNum.num++;
 			break;
 		case "<<": 
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.WRITE,  reservedWordToken);
+			S = new Symbol(sym.WRITE,  symbolToken);
 			CharNum.num += yytext().length();
 			break;
 		case ">>": 
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.READ,  reservedWordToken);
+			S = new Symbol(sym.READ,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "++":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.PLUSPLUS,  reservedWordToken);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
 			CharNum.num += yytext().length();
 			break;
 		case "--":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.MINUSMINUS,  reservedWordToken);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "+":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.PLUS,  reservedWordToken);
+			S = new Symbol(sym.PLUS,  symbolToken);
 			CharNum.num++;
 			break;
 		case "-":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.MINUS,  reservedWordToken);
+			S = new Symbol(sym.MINUS,  symbolToken);
 			CharNum.num++;
 			break;
 		case "*":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.TIMES,  reservedWordToken);
+			S = new Symbol(sym.TIMES,  symbolToken);
 			CharNum.num++;
 		   	break;
 		case "/":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.DIVIDE,  reservedWordToken);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
 			CharNum.num++;
 			break;
 		case "!":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.NOT,  reservedWordToken);
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
 			CharNum.num++;
 			break;
 		case "&&":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.AND,  reservedWordToken);
+			S = new Symbol(sym.AND,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "||":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.OR,  reservedWordToken);
+			S = new Symbol(sym.OR,  symbolToken);
 			CharNum.num += yytext().length();
 			break;
 		case "==":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.ASSIGN,  reservedWordToken);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "!=":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.NOTEQUALS,  reservedWordToken);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
 			CharNum.num += yytext().length();
 			break;
 		case "<":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.LESS,  reservedWordToken);
+			S = new Symbol(sym.LESS,  symbolToken);
 			CharNum.num++;
 		   	break;
 		case ">":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.GREATER,  reservedWordToken);
+			S = new Symbol(sym.GREATER,  symbolToken);
 			CharNum.num++;
 			break;
 		case "<=":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.LESSEQ,  reservedWordToken);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case ">=":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.GREATEREQ,  reservedWordToken);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
 			CharNum.num += yytext().length();
 			break;
 		case "=":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.EQUALS,  reservedWordToken);
+			S = new Symbol(sym.EQUALS,  symbolToken);
 			CharNum.num++;
 			break;
 		default:
@@ -582,9 +584,9 @@ return new Symbol(sym.EOF);
 						break;
 					case 10:
 						{	
-		String val = yyText().toString();
+		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, IdTokenVal);
+		Symbol S = new Symbol(sym.ID, idToken);
 		CharNum.num += yytext().length();
 		return S;
 	     }
