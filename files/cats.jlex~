@@ -88,7 +88,10 @@ return new Symbol(sym.EOF);
 {RESERVEDWORD} {
 		String reservedWord = yytext().toString();
 		Symbol S = null;
+<<<<<<< HEAD
 		TokenVal reservedWordToken = null;
+=======
+>>>>>>> symbols var resolved
 		switch (reservedWord) {
 		   case "bool":
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
@@ -156,8 +159,12 @@ return new Symbol(sym.EOF);
 		return S;				
 	}
 
+<<<<<<< HEAD
 {STRING}  {
 		String val = yyText().toString();
+=======
+{STRING}  {String val = yyText().toString();
+>>>>>>> symbols var resolved
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, strLitTokenVal);
 		CharNum.num += yytext().length();
@@ -328,7 +335,11 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
+<<<<<<< HEAD
     
+=======
+   
+>>>>>>> symbols var resolved
 .         { ErrMsg.fatal(yyline+1, CharNum.num,
                          "illegal character ignored: " + yytext());
             CharNum.num++;

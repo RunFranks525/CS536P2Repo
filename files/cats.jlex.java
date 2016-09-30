@@ -322,65 +322,115 @@ return new Symbol(sym.EOF);
 						{
 		String reservedWord = yytext().toString();
 		Symbol S = null;
+<<<<<<< HEAD
 		TokenVal reservedWordToken = null;
 		switch (reservedWord) {
 		   case "bool":
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+		switch (reservedWord) {
+		   case "bool":
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.BOOL,  reservedWordToken);
 			CharNum.num += yytext().length();	
 			break;
 		   case "int":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.INT,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		   case "void":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.VOID,  reservedWordToken);
 			CharNum.num += yytext().length();		
 			break;
 		   case "true":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.TRUE,  reservedWordToken);
 			CharNum.num += yytext().length();	
 			break;
 		   case "false":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.FALSE,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		   case "struct":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.STRUCT,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		   case "cin":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.CIN,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		   case "cout":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.COUT,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		   case "if":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.IF,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		   case "else":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.ELSE,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		   case "while":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.BOOL,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		   case "return":
+<<<<<<< HEAD
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.RETURN,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
@@ -392,8 +442,12 @@ return new Symbol(sym.EOF);
 					case -2:
 						break;
 					case 2:
+<<<<<<< HEAD
 						{
 		String val = yyText().toString();
+=======
+						{String val = yyText().toString();
+>>>>>>> symbols var resolved
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, strLitTokenVal);
 		CharNum.num += yytext().length();
@@ -420,45 +474,81 @@ return new Symbol(sym.EOF);
 					case -6:
 						break;
 					case 6:
+<<<<<<< HEAD
 						{ Symbol S = null; 
 	    switch(reservedSymbol) {
 		case "{":
 			TokenVal symbolToken = new TokenVal(yyline+1, CharNum.num);
+=======
+						{ Symbol S = null;
+	    TokenVal symbolToken; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.LCURLY,  reservedWordToken);
 			CharNum.num++;	
 			break;
 		case "}":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.RCURLY,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "(":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.LPAREN,  reservedWordToken);
 			CharNum.num++;		
 			break;
 		case ")":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.RPAREN,  reservedWordToken);
 			CharNum.num++;	
 			break;
 		case ";":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.SEMICOLON,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case ",":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.COMMA,  reservedWordToken);
 			CharNum.num++;
 		   	break;
 		case ".":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.DOT,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "<<": 
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.WRITE,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
@@ -468,82 +558,146 @@ return new Symbol(sym.EOF);
 			CharNum.num += yytext().length();
 		   	break;
 		case "++":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.PLUSPLUS,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		case "--":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.MINUSMINUS,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "+":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.PLUS,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "-":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.MINUS,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "*":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.TIMES,  reservedWordToken);
 			CharNum.num++;
 		   	break;
 		case "/":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.DIVIDE,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "!":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.NOT,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "&&":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.AND,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "||":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.OR,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		case "==":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.ASSIGN,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "!=":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.NOTEQUALS,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		case "<":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.LESS,  reservedWordToken);
 			CharNum.num++;
 		   	break;
 		case ">":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.GREATER,  reservedWordToken);
 			CharNum.num++;
 			break;
 		case "<=":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.LESSEQ,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case ">=":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.GREATEREQ,  reservedWordToken);
 			CharNum.num += yytext().length();
 			break;
 		case "=":
+<<<<<<< HEAD
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+=======
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+>>>>>>> symbols var resolved
 			S = new Symbol(sym.EQUALS,  reservedWordToken);
 			CharNum.num++;
 			break;
