@@ -199,7 +199,7 @@ return new Symbol(sym.EOF);
 
 
 {SYMBOLS} { Symbol S = null; 
-	    switch(reservedSymbol){
+	    switch(reservedSymbol) {
 		case "{":
 			TokenVal symbolToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.LCURLY,  reservedWordToken);

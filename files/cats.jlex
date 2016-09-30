@@ -88,7 +88,7 @@ return new Symbol(sym.EOF);
 {RESERVEDWORD} {
 		String reservedWord = yytext().toString();
 		Symbol S = null;
-		switch(reservedWord){
+		switch (reservedWord) {
 		   case "bool":
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.BOOL,  reservedWordToken);
@@ -157,8 +157,6 @@ return new Symbol(sym.EOF);
 	}
 
 {STRING}  {
-		//TODO: Unterminated String Literals
-		//TODO: Bad String Literals
 		String val = yyText().toString();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, strLitTokenVal);
