@@ -83,7 +83,7 @@ return new Symbol(sym.EOF);
 
 %%
 
-{RESERVEDWORD} {
+(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return) {
 		String reservedWord = yytext().toString();
 		Symbol S = null;
 		TokenVal reservedWordToken = null;
@@ -162,8 +162,14 @@ return new Symbol(sym.EOF);
 		return S;
 	  }
 
+(\"([^\n\"\/]|(\\[nt\'\"\?\\]))*(\n|\Z))  {	
+		ErrMsg.fatal(yyline+1, CharNum.num,
+                         "unterminated string literal ignored");
+            		CharNum.num += yytext().length();
+	  }
 
-{IDENTIFIER} {	
+
+([a-z]|[A-Z]|_)([a-z]|[A-Z]|[0-9]|_)* {	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, idToken);
@@ -191,10 +197,10 @@ return new Symbol(sym.EOF);
 {WHITESPACE}+  { CharNum.num += yytext().length(); }
 
 
-{COMMENT} { CharNum.num = 1; }
+(((//)[^\n]*\n)|((#)[^\n]*\n)) { CharNum.num = 1; }
 
 
-{SYMBOLS} { 
+\{|\}|\(|\)|;|,|\.|(<<)|(>>)|(\+\+)|(--)|\+|-|\*|/|!|(&&)|(\|\|)|(==)|(!=)|<|>|(<=)|(>=)|= { 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
 	    TokenVal symbolToken = null; 
@@ -255,7 +261,6 @@ return new Symbol(sym.EOF);
 			CharNum.num += yytext().length();
 		   	break;
 		case "+":
-					System.out.println(reservedSymbol);
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.PLUS,  symbolToken);
 			CharNum.num++;
@@ -292,7 +297,7 @@ return new Symbol(sym.EOF);
 			break;
 		case "==":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.ASSIGN,  symbolToken);
+			S = new Symbol(sym.EQUALS,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "!=":
@@ -322,7 +327,7 @@ return new Symbol(sym.EOF);
 			break;
 		case "=":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.EQUALS,  symbolToken);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
 			CharNum.num++;
 			break;
 		default:

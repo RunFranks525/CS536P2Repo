@@ -262,22 +262,81 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 8 */ YY_NO_ANCHOR,
 		/* 9 */ YY_NO_ANCHOR,
 		/* 10 */ YY_NO_ANCHOR,
-		/* 11 */ YY_NOT_ACCEPT,
-		/* 12 */ YY_NO_ANCHOR,
+		/* 11 */ YY_NO_ANCHOR,
+		/* 12 */ YY_NOT_ACCEPT,
 		/* 13 */ YY_NO_ANCHOR,
 		/* 14 */ YY_NO_ANCHOR,
-		/* 15 */ YY_NOT_ACCEPT
+		/* 15 */ YY_NO_ANCHOR,
+		/* 16 */ YY_NO_ANCHOR,
+		/* 17 */ YY_NO_ANCHOR,
+		/* 18 */ YY_NOT_ACCEPT,
+		/* 19 */ YY_NO_ANCHOR,
+		/* 20 */ YY_NO_ANCHOR,
+		/* 21 */ YY_NO_ANCHOR,
+		/* 22 */ YY_NOT_ACCEPT,
+		/* 23 */ YY_NO_ANCHOR,
+		/* 24 */ YY_NO_ANCHOR,
+		/* 25 */ YY_NO_ANCHOR,
+		/* 26 */ YY_NO_ANCHOR,
+		/* 27 */ YY_NO_ANCHOR,
+		/* 28 */ YY_NO_ANCHOR,
+		/* 29 */ YY_NO_ANCHOR,
+		/* 30 */ YY_NO_ANCHOR,
+		/* 31 */ YY_NO_ANCHOR,
+		/* 32 */ YY_NO_ANCHOR,
+		/* 33 */ YY_NO_ANCHOR,
+		/* 34 */ YY_NO_ANCHOR,
+		/* 35 */ YY_NO_ANCHOR,
+		/* 36 */ YY_NO_ANCHOR,
+		/* 37 */ YY_NO_ANCHOR,
+		/* 38 */ YY_NO_ANCHOR,
+		/* 39 */ YY_NO_ANCHOR,
+		/* 40 */ YY_NO_ANCHOR,
+		/* 41 */ YY_NO_ANCHOR,
+		/* 42 */ YY_NO_ANCHOR,
+		/* 43 */ YY_NO_ANCHOR,
+		/* 44 */ YY_NO_ANCHOR,
+		/* 45 */ YY_NO_ANCHOR,
+		/* 46 */ YY_NO_ANCHOR,
+		/* 47 */ YY_NO_ANCHOR,
+		/* 48 */ YY_NO_ANCHOR,
+		/* 49 */ YY_NO_ANCHOR,
+		/* 50 */ YY_NO_ANCHOR,
+		/* 51 */ YY_NO_ANCHOR,
+		/* 52 */ YY_NO_ANCHOR,
+		/* 53 */ YY_NO_ANCHOR,
+		/* 54 */ YY_NO_ANCHOR,
+		/* 55 */ YY_NO_ANCHOR,
+		/* 56 */ YY_NO_ANCHOR
 	};
 	private int yy_cmap[] = unpackFromString(1,130,
-"5:9,9,8,5:2,3,5:18,9,12,2,10,5:2,12,5,1:2,6,12:4,11,7:10,5,12:4,5:2,6:26,10" +
-",4,10:2,6,5,1:6,6,1:2,6:2,1,6,1:2,6:2,1:6,6:3,12,1,12,5:2,0:2")[0];
+"21:9,27,22,21:2,19,21:18,27,35,18,29,21:2,36,21,30:3,33,30,34,30,28,26:10,2" +
+"1,30,31,38,32,21:2,25:25,23,21,20,21:2,25,21,13,1,15,8,11,12,24,17,4,24:2,3" +
+",24,5,2,24:2,9,14,6,10,7,16,24:3,30,37,30,21:2,0:2")[0];
 
-	private int yy_rmap[] = unpackFromString(1,16,
-"0,1:2,2,1:2,3,1:3,4,2,1,4,2,5")[0];
+	private int yy_rmap[] = unpackFromString(1,57,
+"0,1,2,3,1,4,5,6,7,1:3,3,8,1:2,3:2,9,10,11,12,11,13,14,15,16,17,18,19,20,21," +
+"22,23,24,7,25,26,27,28,29,30,31,32,33,34,35,36,7,37,38,39,40,29,41,42,43")[0];
 
-	private int yy_nxt[][] = unpackFromString(6,13,
-"1,2,3,-1,12:2,4,13,5,6,7:2,8,-1:14,11,9,11,15,11:3,-1,11:2,-1,11,-1:9,6,-1:" +
-"10,10,-1:6,11,14,11,15,11:3,-1,11:2,-1,11");
+	private int yy_nxt[][] = unpackFromString(44,39,
+"1,2,48:2,13,48,50,51,48,52,48,53,54,48,55,33,56,48,3,-1,14:2,4,48:3,5,6,7,2" +
+"0,15,21,25,28,30,32,24,27,32,-1:40,48,34,48:15,-1:5,35,48,35:2,-1:13,12:17," +
+"9,12,18,12,10,17,12:4,-1,12:10,-1:26,5,-1:39,6,-1:39,22,-1:11,48:17,-1:5,35" +
+",48,35:2,-1:13,48:4,19,48:6,8,48:5,-1:5,35,48,35:2,-1:13,12:17,16,12,18,12," +
+"10,17,12:4,-1,12:10,-1,48:5,8,48:11,-1:5,35,48,35:2,-1:13,22:21,11,22:16,-1" +
+":31,15,-1:6,15,-1,48:4,8,48:12,-1:5,35,48,35:2,-1:48,15,-1:34,15,-1:5,15,-1" +
+",48:2,8,48:14,-1:5,35,48,35:2,-1:49,15,-1:34,15,-1:6,48:10,8,48:6,-1:5,35,4" +
+"8,35:2,-1:46,15,-1:5,48:7,8,48:9,-1:5,35,48,35:2,-1:50,15,-1,48,42,48,23,48" +
+":13,-1:5,35,48,35:2,-1:13,48,26,48:15,-1:5,35,48,35:2,-1:13,48:9,29,48:7,-1" +
+":5,35,48,35:2,-1:13,48:3,31,48:13,-1:5,35,48,35:2,-1:13,48:5,44,48:11,-1:5," +
+"35,48,35:2,-1:13,48:13,29,48:3,-1:5,35,48,35:2,-1:13,48:2,39,48:14,-1:5,35," +
+"48,35:2,-1:13,48:8,49,48:8,-1:5,35,48,35:2,-1:13,48:9,19,48:7,-1:5,35,48,35" +
+":2,-1:13,48:3,45,48:13,-1:5,35,48,35:2,-1:13,48:9,46,48:7,-1:5,35,48,35:2,-" +
+"1:13,48:2,29,48:14,-1:5,35,48,35:2,-1:13,48:8,23,48:8,-1:5,35,48,35:2,-1:13" +
+",48:14,19,48:2,-1:5,35,48,35:2,-1:13,48:9,47,48:7,-1:5,35,48,35:2,-1:13,48:" +
+"8,36,48:8,-1:5,35,48,35:2,-1:13,48,37,48:15,-1:5,35,48,35:2,-1:13,48:10,38," +
+"48:6,-1:5,35,48,35:2,-1:13,48:12,40,48:4,-1:5,35,48,35:2,-1:13,48:5,41,48:1" +
+"1,-1:5,35,48,35:2,-1:13,48:16,43,-1:5,35,48,35:2,-1:12");
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -329,76 +388,13 @@ return new Symbol(sym.EOF);
 					case -2:
 						break;
 					case 2:
-						{
-		String reservedWord = yytext().toString();
-		Symbol S = null;
-		TokenVal reservedWordToken = null;
-		switch (reservedWord) {
-		   case "bool":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.BOOL,  reservedWordToken);
-			CharNum.num += yytext().length();	
-			break;
-		   case "int":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.INT,  reservedWordToken);
-			CharNum.num += yytext().length();
-			break;
-		   case "void":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.VOID,  reservedWordToken);
-			CharNum.num += yytext().length();		
-			break;
-		   case "true":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.TRUE,  reservedWordToken);
-			CharNum.num += yytext().length();	
-			break;
-		   case "false":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.FALSE,  reservedWordToken);
-			CharNum.num += yytext().length();
-			break;
-		   case "struct":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.STRUCT,  reservedWordToken);
-			CharNum.num += yytext().length();
-		   	break;
-		   case "cin":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.CIN,  reservedWordToken);
-			CharNum.num += yytext().length();
-			break;
-		   case "cout":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.COUT,  reservedWordToken);
-			CharNum.num += yytext().length();
-			break;
-		   case "if":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.IF,  reservedWordToken);
-			CharNum.num += yytext().length();
-		   	break;
-		   case "else":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.ELSE,  reservedWordToken);
-			CharNum.num += yytext().length();
-			break;
-		   case "while":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.BOOL,  reservedWordToken);
-			CharNum.num += yytext().length();
-		   	break;
-		   case "return":
-			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.RETURN,  reservedWordToken);
-			CharNum.num += yytext().length();
-			break;
-		   default:
-			break;
-		}
-		return S;				
-	}
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
 					case -3:
 						break;
 					case 3:
@@ -409,17 +405,22 @@ return new Symbol(sym.EOF);
 					case -4:
 						break;
 					case 4:
-						{	
-		String val = yytext().toString();
-		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, idToken);
-		CharNum.num += yytext().length();
-		return S;
-	     }
+						{ CharNum.num = 1; }
 					case -5:
 						break;
 					case 5:
-						{ CharNum.num = 1; }
+						{ 
+            	int val = (new Integer(yytext())).intValue(); // if int overflows -- this may crash before the if check
+		if((val > 0 && val <= Integer.MAX_VALUE) && (val < 0 && val >= Integer.MIN_VALUE)){
+			ErrMsg.fatal(yyline+1, CharNum.num,
+                         "integer overflow, exceeds " + Integer.MAX_VALUE);
+            		CharNum.num += yytext().length();
+		}
+		IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
+            	Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
+            	CharNum.num += yytext().length();
+            	return S;
+          }
 					case -6:
 						break;
 					case 6:
@@ -427,10 +428,6 @@ return new Symbol(sym.EOF);
 					case -7:
 						break;
 					case 7:
-						{ CharNum.num = 1; }
-					case -8:
-						break;
-					case 8:
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -528,7 +525,7 @@ return new Symbol(sym.EOF);
 			break;
 		case "==":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.ASSIGN,  symbolToken);
+			S = new Symbol(sym.EQUALS,  symbolToken);
 			CharNum.num += yytext().length();
 		   	break;
 		case "!=":
@@ -558,7 +555,7 @@ return new Symbol(sym.EOF);
 			break;
 		case "=":
 			symbolToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.EQUALS,  symbolToken);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
 			CharNum.num++;
 			break;
 		default:
@@ -566,6 +563,79 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
+					case -8:
+						break;
+					case 8:
+						{
+		String reservedWord = yytext().toString();
+		Symbol S = null;
+		TokenVal reservedWordToken = null;
+		switch (reservedWord) {
+		   case "bool":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.BOOL,  reservedWordToken);
+			CharNum.num += yytext().length();	
+			break;
+		   case "int":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.INT,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "void":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.VOID,  reservedWordToken);
+			CharNum.num += yytext().length();		
+			break;
+		   case "true":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TRUE,  reservedWordToken);
+			CharNum.num += yytext().length();	
+			break;
+		   case "false":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.FALSE,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "struct":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.STRUCT,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "cin":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.CIN,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "cout":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COUT,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "if":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.IF,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "else":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ELSE,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "while":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.BOOL,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "return":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RETURN,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   default:
+			break;
+		}
+		return S;				
+	}
 					case -9:
 						break;
 					case 9:
@@ -579,25 +649,15 @@ return new Symbol(sym.EOF);
 					case -10:
 						break;
 					case 10:
-						{ 
-            	int val = (new Integer(yytext())).intValue(); // if int overflows -- this may crash before the if check
-		if((val > 0 && val <= Integer.MAX_VALUE) && (val < 0 && val >= Integer.MIN_VALUE)){
-			ErrMsg.fatal(yyline+1, CharNum.num,
-                         "integer overflow, exceeds " + Integer.MAX_VALUE);
+						{	
+		ErrMsg.fatal(yyline+1, CharNum.num,
+                         "unterminated string literal ignored");
             		CharNum.num += yytext().length();
-		}
-		IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
-            	Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
-            	CharNum.num += yytext().length();
-            	return S;
-          }
+	  }
 					case -11:
 						break;
-					case 12:
-						{ ErrMsg.fatal(yyline+1, CharNum.num,
-                         "illegal character ignored: " + yytext());
-            CharNum.num++;
-          }
+					case 11:
+						{ CharNum.num = 1; }
 					case -12:
 						break;
 					case 13:
@@ -611,6 +671,151 @@ return new Symbol(sym.EOF);
 					case -13:
 						break;
 					case 14:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -14:
+						break;
+					case 15:
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  symbolToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  symbolToken);
+			CharNum.num++;
+			break;
+		case "(":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  symbolToken);
+			CharNum.num++;		
+			break;
+		case ")":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  symbolToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
+			CharNum.num++;
+			break;
+		case ",":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<<": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WRITE,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.READ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "-":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "*":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
+			CharNum.num++;
+			break;
+		case "!":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
+            return S;
+          }
+					case -15:
+						break;
+					case 16:
 						{	
 		String val = yytext();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
@@ -618,7 +823,1016 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	  }
-					case -14:
+					case -16:
+						break;
+					case 17:
+						{	
+		ErrMsg.fatal(yyline+1, CharNum.num,
+                         "unterminated string literal ignored");
+            		CharNum.num += yytext().length();
+	  }
+					case -17:
+						break;
+					case 19:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -18:
+						break;
+					case 20:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -19:
+						break;
+					case 21:
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  symbolToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  symbolToken);
+			CharNum.num++;
+			break;
+		case "(":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  symbolToken);
+			CharNum.num++;		
+			break;
+		case ")":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  symbolToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
+			CharNum.num++;
+			break;
+		case ",":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<<": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WRITE,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.READ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "-":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "*":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
+			CharNum.num++;
+			break;
+		case "!":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
+            return S;
+          }
+					case -20:
+						break;
+					case 23:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -21:
+						break;
+					case 24:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -22:
+						break;
+					case 25:
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  symbolToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  symbolToken);
+			CharNum.num++;
+			break;
+		case "(":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  symbolToken);
+			CharNum.num++;		
+			break;
+		case ")":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  symbolToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
+			CharNum.num++;
+			break;
+		case ",":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<<": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WRITE,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.READ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "-":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "*":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
+			CharNum.num++;
+			break;
+		case "!":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
+            return S;
+          }
+					case -23:
+						break;
+					case 26:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -24:
+						break;
+					case 27:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -25:
+						break;
+					case 28:
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  symbolToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  symbolToken);
+			CharNum.num++;
+			break;
+		case "(":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  symbolToken);
+			CharNum.num++;		
+			break;
+		case ")":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  symbolToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
+			CharNum.num++;
+			break;
+		case ",":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<<": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WRITE,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.READ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "-":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "*":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
+			CharNum.num++;
+			break;
+		case "!":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
+            return S;
+          }
+					case -26:
+						break;
+					case 29:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -27:
+						break;
+					case 30:
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  symbolToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  symbolToken);
+			CharNum.num++;
+			break;
+		case "(":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  symbolToken);
+			CharNum.num++;		
+			break;
+		case ")":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  symbolToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
+			CharNum.num++;
+			break;
+		case ",":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<<": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WRITE,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.READ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "-":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "*":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
+			CharNum.num++;
+			break;
+		case "!":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
+            return S;
+          }
+					case -28:
+						break;
+					case 31:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -29:
+						break;
+					case 32:
+						{ 
+	    String reservedSymbol = yytext().toString();
+	    Symbol S = null;
+	    TokenVal symbolToken = null; 
+	    switch(reservedSymbol) {
+		case "{":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LCURLY,  symbolToken);
+			CharNum.num++;	
+			break;
+		case "}":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RCURLY,  symbolToken);
+			CharNum.num++;
+			break;
+		case "(":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LPAREN,  symbolToken);
+			CharNum.num++;		
+			break;
+		case ")":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RPAREN,  symbolToken);
+			CharNum.num++;	
+			break;
+		case ";":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.SEMICOLON,  symbolToken);
+			CharNum.num++;
+			break;
+		case ",":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COMMA,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ".":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<<": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WRITE,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case ">>": 
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.READ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "++":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUSPLUS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "--":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUSMINUS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "+":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.PLUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "-":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.MINUS,  symbolToken);
+			CharNum.num++;
+			break;
+		case "*":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TIMES,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case "/":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.DIVIDE,  symbolToken);
+			CharNum.num++;
+			break;
+		case "!":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOT,  symbolToken);
+			CharNum.num++;
+			break;
+		case "&&":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.AND,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "||":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.OR,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "==":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.EQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case "!=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.NOTEQUALS,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "<":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESS,  symbolToken);
+			CharNum.num++;
+		   	break;
+		case ">":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATER,  symbolToken);
+			CharNum.num++;
+			break;
+		case "<=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.LESSEQ,  symbolToken);
+			CharNum.num += yytext().length();
+		   	break;
+		case ">=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.GREATEREQ,  symbolToken);
+			CharNum.num += yytext().length();
+			break;
+		case "=":
+			symbolToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ASSIGN,  symbolToken);
+			CharNum.num++;
+			break;
+		default:
+			break;
+	    }
+            return S;
+          }
+					case -30:
+						break;
+					case 33:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -31:
+						break;
+					case 34:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -32:
+						break;
+					case 35:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -33:
+						break;
+					case 36:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -34:
+						break;
+					case 37:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -35:
+						break;
+					case 38:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -36:
+						break;
+					case 39:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -37:
+						break;
+					case 40:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -38:
+						break;
+					case 41:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -39:
+						break;
+					case 42:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -40:
+						break;
+					case 43:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -41:
+						break;
+					case 44:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -42:
+						break;
+					case 45:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -43:
+						break;
+					case 46:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -44:
+						break;
+					case 47:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -45:
+						break;
+					case 48:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -46:
+						break;
+					case 49:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -47:
+						break;
+					case 50:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -48:
+						break;
+					case 51:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -49:
+						break;
+					case 52:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -50:
+						break;
+					case 53:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -51:
+						break;
+					case 54:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -52:
+						break;
+					case 55:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -53:
+						break;
+					case 56:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -54:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);
