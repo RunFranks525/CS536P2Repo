@@ -61,8 +61,6 @@ DIGIT=        [0-9]
 
 WHITESPACE =   [\040\t]
 
-RESERVEDWORD = [(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return)]
-
 IDENTIFIER =   [((a-z)(A-Z)_)|((a-z)(A-Z)(0-9)_)*]
 
 COMMENT =     [((//)\[^\n\]*\n)|((#)\[^\n\]*\n)]
@@ -84,7 +82,11 @@ return new Symbol(sym.EOF);
 %%
 
 (bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return) {
+<<<<<<< HEAD
 		String reservedWord = yytext().toString();
+=======
+		String reservedWord = yytext();
+>>>>>>> Did some fuckin poo poo stuff
 		Symbol S = null;
 		TokenVal reservedWordToken = null;
 		switch (reservedWord) {
@@ -140,7 +142,7 @@ return new Symbol(sym.EOF);
 			break;
 		   case "while":
 			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
-			S = new Symbol(sym.BOOL,  reservedWordToken);
+			S = new Symbol(sym.WHILE,  reservedWordToken);
 			CharNum.num += yytext().length();
 		   	break;
 		   case "return":
@@ -168,8 +170,12 @@ return new Symbol(sym.EOF);
             		CharNum.num += yytext().length();
 	  }
 
+<<<<<<< HEAD
 
 ([a-z]|[A-Z]|_)([a-z]|[A-Z]|[0-9]|_)* {	
+=======
+([a-z]|[A-Z]|_)|([a-z]|[A-Z]|[0-9]|_)* {	
+>>>>>>> Did some fuckin poo poo stuff
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, idToken);
@@ -177,17 +183,21 @@ return new Symbol(sym.EOF);
 		return S;
 	     }
 
-{DIGIT}+  { 
-            	int val = (new Integer(yytext())).intValue(); // if int overflows -- this may crash before the if check
-		if((val > 0 && val <= Integer.MAX_VALUE) && (val < 0 && val >= Integer.MIN_VALUE)){
+{DIGIT}+  {  
+            	double bigVal = (new Double(yytext())).doubleValue();
+			System.out.println("fuck you");
+		if(bigVal > Integer.MAX_VALUE) {
 			ErrMsg.fatal(yyline+1, CharNum.num,
                          "integer overflow, exceeds " + Integer.MAX_VALUE);
             		CharNum.num += yytext().length();
+		} else{
+			System.out.println("fuck you");
+			int val = (new Integer(yytext())).intValue();
+			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
+            		Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
+            		CharNum.num += yytext().length();
+            		return S;
 		}
-		IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
-            	Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
-            	CharNum.num += yytext().length();
-            	return S;
           }
 
 \n        { CharNum.num = 1; }

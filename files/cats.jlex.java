@@ -266,6 +266,7 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 12 */ YY_NOT_ACCEPT,
 		/* 13 */ YY_NO_ANCHOR,
 		/* 14 */ YY_NO_ANCHOR,
+<<<<<<< HEAD
 		/* 15 */ YY_NO_ANCHOR,
 		/* 16 */ YY_NO_ANCHOR,
 		/* 17 */ YY_NO_ANCHOR,
@@ -274,6 +275,16 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 20 */ YY_NO_ANCHOR,
 		/* 21 */ YY_NO_ANCHOR,
 		/* 22 */ YY_NOT_ACCEPT,
+=======
+		/* 15 */ YY_NOT_ACCEPT,
+		/* 16 */ YY_NO_ANCHOR,
+		/* 17 */ YY_NO_ANCHOR,
+		/* 18 */ YY_NO_ANCHOR,
+		/* 19 */ YY_NO_ANCHOR,
+		/* 20 */ YY_NO_ANCHOR,
+		/* 21 */ YY_NO_ANCHOR,
+		/* 22 */ YY_NO_ANCHOR,
+>>>>>>> Did some fuckin poo poo stuff
 		/* 23 */ YY_NO_ANCHOR,
 		/* 24 */ YY_NO_ANCHOR,
 		/* 25 */ YY_NO_ANCHOR,
@@ -295,6 +306,7 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 41 */ YY_NO_ANCHOR,
 		/* 42 */ YY_NO_ANCHOR,
 		/* 43 */ YY_NO_ANCHOR,
+<<<<<<< HEAD
 		/* 44 */ YY_NO_ANCHOR,
 		/* 45 */ YY_NO_ANCHOR,
 		/* 46 */ YY_NO_ANCHOR,
@@ -337,6 +349,35 @@ class Yylex implements java_cup.runtime.Scanner {
 "8,36,48:8,-1:5,35,48,35:2,-1:13,48,37,48:15,-1:5,35,48,35:2,-1:13,48:10,38," +
 "48:6,-1:5,35,48,35:2,-1:13,48:12,40,48:4,-1:5,35,48,35:2,-1:13,48:5,41,48:1" +
 "1,-1:5,35,48,35:2,-1:13,48:16,43,-1:5,35,48,35:2,-1:12");
+=======
+		/* 44 */ YY_NO_ANCHOR
+	};
+	private int yy_cmap[] = unpackFromString(1,130,
+"21:9,26,25,21:2,19,21:18,26,29,18,27,21:2,29,21,27:3,29:4,28,24:10,21,29:4," +
+"21:2,23:26,27,20,27:2,23,21,13,1,15,8,11,12,22,17,4,22:2,3,22,5,2,22:2,9,14" +
+",6,10,7,16,22:3,29,27,29,21:2,0:2")[0];
+
+	private int yy_rmap[] = unpackFromString(1,45,
+"0,1,2,3,4,1,5,1:2,6,1,3,7,1,3,8,9,10,11,12,13,14,15,6,16,17,18,19,20,21,22," +
+"23,24,25,26,27,6,28,29,30,31,20,32,33,34")[0];
+
+	private int yy_nxt[][] = unpackFromString(35,30,
+"1,2,36:2,12,36,38,39,36,40,36,41,42,36,43,21,44,36,3,-1,13:2,36:2,4,5,6,7:2" +
+",8,-1:31,36,22,36:15,-1:4,36,23:2,-1:6,11:17,10,11,15,11:4,-1,11:2,-1,11,-1" +
+":24,4,-1:31,6,-1:4,36:17,-1:4,36,23:2,-1:6,36:4,16,36:6,9,36:5,-1:4,36,23:2" +
+",-1:6,11:17,14,11,15,11:4,-1,11:2,-1,11,-1,36:5,9,36:11,-1:4,36,23:2,-1:6,3" +
+"6:4,9,36:12,-1:4,36,23:2,-1:6,36:2,9,36:14,-1:4,36,23:2,-1:6,36:10,9,36:6,-" +
+"1:4,36,23:2,-1:6,36:7,9,36:9,-1:4,36,23:2,-1:6,36,30,36,17,36:13,-1:4,36,23" +
+":2,-1:6,36,18,36:15,-1:4,36,23:2,-1:6,36:9,19,36:7,-1:4,36,23:2,-1:6,36:3,2" +
+"0,36:13,-1:4,36,23:2,-1:6,36:5,32,36:11,-1:4,36,23:2,-1:6,36:13,19,36:3,-1:" +
+"4,36,23:2,-1:6,36:2,27,36:14,-1:4,36,23:2,-1:6,36:8,37,36:8,-1:4,36,23:2,-1" +
+":6,36:9,16,36:7,-1:4,36,23:2,-1:6,36:3,33,36:13,-1:4,36,23:2,-1:6,36:9,34,3" +
+"6:7,-1:4,36,23:2,-1:6,36:2,19,36:14,-1:4,36,23:2,-1:6,36:8,17,36:8,-1:4,36," +
+"23:2,-1:6,36:14,16,36:2,-1:4,36,23:2,-1:6,36:9,35,36:7,-1:4,36,23:2,-1:6,36" +
+":8,24,36:8,-1:4,36,23:2,-1:6,36,25,36:15,-1:4,36,23:2,-1:6,36:10,26,36:6,-1" +
+":4,36,23:2,-1:6,36:12,28,36:4,-1:4,36,23:2,-1:6,36:5,29,36:11,-1:4,36,23:2," +
+"-1:6,36:16,31,-1:4,36,23:2,-1:5");
+>>>>>>> Did some fuckin poo poo stuff
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -396,6 +437,7 @@ return new Symbol(sym.EOF);
 		return S;
 	     }
 					case -3:
+<<<<<<< HEAD
 						break;
 					case 3:
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
@@ -637,6 +679,8 @@ return new Symbol(sym.EOF);
 		return S;				
 	}
 					case -9:
+=======
+>>>>>>> Did some fuckin poo poo stuff
 						break;
 					case 9:
 						{	
@@ -648,6 +692,7 @@ return new Symbol(sym.EOF);
 	  }
 					case -10:
 						break;
+<<<<<<< HEAD
 					case 10:
 						{	
 		ErrMsg.fatal(yyline+1, CharNum.num,
@@ -669,6 +714,34 @@ return new Symbol(sym.EOF);
 		return S;
 	     }
 					case -13:
+=======
+					case 4:
+						{  
+            	double bigVal = (new Double(yytext())).doubleValue();
+			System.out.println("fuck you");
+		if(bigVal > Integer.MAX_VALUE) {
+			ErrMsg.fatal(yyline+1, CharNum.num,
+                         "integer overflow, exceeds " + Integer.MAX_VALUE);
+            		CharNum.num += yytext().length();
+		} else{
+			System.out.println("fuck you");
+			int val = (new Integer(yytext())).intValue();
+			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
+            		Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
+            		CharNum.num += yytext().length();
+            		return S;
+		}
+          }
+					case -5:
+						break;
+					case 5:
+						{ CharNum.num = 1; }
+					case -6:
+						break;
+					case 6:
+						{ CharNum.num += yytext().length(); }
+					case -7:
+>>>>>>> Did some fuckin poo poo stuff
 						break;
 					case 14:
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
@@ -815,7 +888,84 @@ return new Symbol(sym.EOF);
           }
 					case -15:
 						break;
+<<<<<<< HEAD
 					case 16:
+=======
+					case 9:
+						{
+		String reservedWord = yytext();
+		Symbol S = null;
+		TokenVal reservedWordToken = null;
+		switch (reservedWord) {
+		   case "bool":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.BOOL,  reservedWordToken);
+			CharNum.num += yytext().length();	
+			break;
+		   case "int":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.INT,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "void":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.VOID,  reservedWordToken);
+			CharNum.num += yytext().length();		
+			break;
+		   case "true":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.TRUE,  reservedWordToken);
+			CharNum.num += yytext().length();	
+			break;
+		   case "false":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.FALSE,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "struct":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.STRUCT,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "cin":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.CIN,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "cout":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.COUT,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "if":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.IF,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "else":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.ELSE,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   case "while":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.WHILE,  reservedWordToken);
+			CharNum.num += yytext().length();
+		   	break;
+		   case "return":
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			S = new Symbol(sym.RETURN,  reservedWordToken);
+			CharNum.num += yytext().length();
+			break;
+		   default:
+			break;
+		}
+		return S;				
+	}
+					case -10:
+						break;
+					case 10:
+>>>>>>> Did some fuckin poo poo stuff
 						{	
 		String val = yytext();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
@@ -823,6 +973,7 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	  }
+<<<<<<< HEAD
 					case -16:
 						break;
 					case 17:
@@ -834,6 +985,11 @@ return new Symbol(sym.EOF);
 					case -17:
 						break;
 					case 19:
+=======
+					case -11:
+						break;
+					case 12:
+>>>>>>> Did some fuckin poo poo stuff
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -841,7 +997,18 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
+<<<<<<< HEAD
 					case -18:
+=======
+					case -12:
+						break;
+					case 13:
+						{ ErrMsg.fatal(yyline+1, CharNum.num,
+                         "illegal character ignored: " + yytext());
+            CharNum.num++;
+          }
+					case -13:
+>>>>>>> Did some fuckin poo poo stuff
 						break;
 					case 20:
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
@@ -1833,6 +2000,296 @@ return new Symbol(sym.EOF);
 		return S;
 	     }
 					case -54:
+						break;
+					case 16:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -15:
+						break;
+					case 17:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -16:
+						break;
+					case 18:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -17:
+						break;
+					case 19:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -18:
+						break;
+					case 20:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -19:
+						break;
+					case 21:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -20:
+						break;
+					case 22:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -21:
+						break;
+					case 23:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -22:
+						break;
+					case 24:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -23:
+						break;
+					case 25:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -24:
+						break;
+					case 26:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -25:
+						break;
+					case 27:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -26:
+						break;
+					case 28:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -27:
+						break;
+					case 29:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -28:
+						break;
+					case 30:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -29:
+						break;
+					case 31:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -30:
+						break;
+					case 32:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -31:
+						break;
+					case 33:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -32:
+						break;
+					case 34:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -33:
+						break;
+					case 35:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -34:
+						break;
+					case 36:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -35:
+						break;
+					case 37:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -36:
+						break;
+					case 38:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -37:
+						break;
+					case 39:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -38:
+						break;
+					case 40:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -39:
+						break;
+					case 41:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -40:
+						break;
+					case 42:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -41:
+						break;
+					case 43:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -42:
+						break;
+					case 44:
+						{	
+		String val = yytext().toString();
+		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.ID, idToken);
+		CharNum.num += yytext().length();
+		return S;
+	     }
+					case -43:
 						break;
 					default:
 						yy_error(YY_E_INTERNAL,false);

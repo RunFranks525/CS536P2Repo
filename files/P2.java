@@ -21,21 +21,40 @@ public class P2 {
 	//For each, instantiate a new scanner instance, set CharNum.num back to one each time
 	//DON'T FORGET TO INCLUDE CODE THAT TESTS WHETHER THE CORRECT CHARACTER NUMBER (AS WELL AS LINE NUMBER) IS RETURNED FOR EVERY TOKEN
 	//	input that causes errors
-	/*testBadInput();
+	testBadInput();
 	CharNum.num = 1;
 	//	character numbers
-	testCharacterNumbers();
+	/*testCharacterNumbers();
 	CharNum.num = 1;
 	//	values associated with tokens
 	testAssociatedValues();
 	CharNum.num = 1;*/
     }
-/*
-    private static void testBadInput(){
-	Yylex scanner = new Yylex(); //Needs an input file with bad input
-	
+
+    private static void testBadInput() throws IOException{
+	FileReader inFile = null;
+        PrintWriter outFile = null;
+        try {
+            inFile = new FileReader("badTokens.in");
+            outFile = new PrintWriter(new FileWriter("badTokens.out"));
+        } catch (FileNotFoundException ex) {
+            System.err.println("File allTokens.in not found.");
+            System.exit(-1);
+        } catch (IOException ex) {
+            System.err.println("allTokens.out cannot be opened.");
+            System.exit(-1);
+        }
+
+	Yylex scanner = new Yylex(inFile); //Needs an input file with bad input
+	Symbol badToken = scanner.next_token();
+	System.out.println(badToken.sym);
+	while(badToken.sym != sym.EOF){
+		outFile.println("poo");
+		badToken = scanner.next_token();
+	}
+	outFile.close();
     }
-	
+/*	
     private static void testCharacterNumbers(){
 	Yylex scanner = new Yylex(); //Needs an input file
     }

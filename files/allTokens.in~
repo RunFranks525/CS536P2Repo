@@ -1,6 +1,7 @@
 123
 +
 x
+<<<<<<< HEAD
 ass
 =
 boob
@@ -33,3 +34,22 @@ g
 ++
 "feeed me"
 "5eeeeed me
+=======
+bool
+int
+void
+true
+false
+struct
+cin
+cout
+if
+else
+while
+return
+int
+five
+= 
+10
+;
+>>>>>>> Did some fuckin poo poo stuff
