@@ -47,7 +47,6 @@ public class P2 {
 
 	Yylex scanner = new Yylex(inFile); //Needs an input file with bad input
 	Symbol badToken = scanner.next_token();
-	System.out.println(badToken.sym);
 	while(badToken.sym != sym.EOF){
 <<<<<<< HEAD
 		switch (badToken.sym) {
@@ -88,13 +87,13 @@ public class P2 {
                 outFile.println("return");
                 break;
             case sym.ID:
-                outFile.println(((IdTokenVal)token.value).idVal);
+                outFile.println(((IdTokenVal)badToken.value).idVal);
                 break;
             case sym.INTLITERAL:
-                outFile.println(((IntLitTokenVal)token.value).intVal);
+                outFile.println(((IntLitTokenVal)badToken.value).intVal);
                 break;
             case sym.STRINGLITERAL:
-                outFile.println(((StrLitTokenVal)token.value).strVal);
+                outFile.println(((StrLitTokenVal)badToken.value).strVal);
                 break;    
             case sym.LCURLY:
                 outFile.println("{");

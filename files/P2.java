@@ -48,7 +48,6 @@ public class P2 {
 	Yylex scanner = new Yylex(inFile); //Needs an input file with bad input
 	Symbol badToken = scanner.next_token();
 	while(badToken.sym != sym.EOF){
-<<<<<<< HEAD
 		switch (badToken.sym) {
             case sym.BOOL:
                 outFile.println("bool"); 
@@ -173,9 +172,7 @@ public class P2 {
 	   default:
 		outFile.println("UNKNOWN TOKEN");
             } // end switch
-=======
->>>>>>> moving changes to ScottsBranch
-		badToken = scanner.next_token();
+	badToken = scanner.next_token();
 	}
 	outFile.close();
     }
