@@ -10,27 +10,102 @@ import java_cup.runtime.*;  // defines Symbol
  */
 public class P2 {
     public static void main(String[] args) throws IOException {
-        // exception may be thrown by yylex
-        // test all tokens
-        //testAllTokens();
+        testAllTokens();
         CharNum.num = 1;
-    
-        // ADD CALLS TO OTHER TEST METHODS HERE
-
-	//All Tokens are tested - we are required to test other aspects of the scanner 
-	//For each, instantiate a new scanner instance, set CharNum.num back to one each time
-	//DON'T FORGET TO INCLUDE CODE THAT TESTS WHETHER THE CORRECT CHARACTER NUMBER (AS WELL AS LINE NUMBER) IS RETURNED FOR EVERY TOKEN
-	//	input that causes errors
 	testBadInput();
 	CharNum.num = 1;
-	//	character numbers
-	/*testCharacterNumbers();
+	testEmptyFile();
 	CharNum.num = 1;
-	//	values associated with tokens
-	testAssociatedValues();
-	CharNum.num = 1;*/
+	testIgnoredInput();
+	CharNum.num = 1;
+	testCharacterNumbers();
+	CharNum.num = 1;
     }
 
+    private static void testCharacterNumbers() throws IOException{
+	FileReader inFile = null;
+        PrintWriter outFile = null;
+	TokenVal[] tokenArray = new TokenVal[];
+        try {
+            inFile = new FileReader("allTokens.in");
+            outFile = new PrintWriter(new FileWriter("allTokens.out"));
+        } catch (FileNotFoundException ex) {
+            System.err.println("File allTokens.in not found.");
+            System.exit(-1);
+        } catch (IOException ex) {
+            System.err.println("allTokens.out cannot be opened.");
+            System.exit(-1);
+        }
+
+        Yylex scanner = new Yylex(inFile);
+        Symbol token = scanner.next_token();
+
+	while(token.sym != sym.EOF){
+	    switch(token.sym){
+		case sym.BOOL:
+			
+		    break;
+	    }
+	    int charNum = 1;
+	    TokenVal tokenVal = (TokenVal) token.value;
+	    if(tokenVal.linenum != lineNum){
+		System.err.println("Scanner not reading the correct line at the correct time. Exiting...");
+		System.exit(-1);
+	    }
+	    System.out.println(tokenVal.charnum);
+	    lineNum++;
+	    token = scanner.next_token();
+	}
+    }
+
+    private static void testIgnoredInput() throws IOException{
+	FileReader inFile = null;
+	FileReader intermediaryFile = null;
+        PrintWriter outFile = null;
+        try {
+            inFile = new FileReader("ignoredTokens.in");
+            outFile = new PrintWriter(new FileWriter("ignoredTokens.out"));
+        } catch (FileNotFoundException ex) {
+            System.err.println("File ignoredTokens.in not found.");
+            System.exit(-1);
+        } catch (IOException ex) {
+            System.err.println("ignoredTokens.out cannot be opened.");
+            System.exit(-1);
+        }
+
+	Yylex scanner = new Yylex(inFile);
+	Symbol token = scanner.next_token();
+	if(token.sym == sym.EOF){
+	    try {
+	        intermediaryFile = new FileReader("intermediaryFile.in");
+	    } catch (FileNotFoundException ex) {
+		System.err.println("File intermediaryFile.in not found.");
+		System.exit(-1);
+	    }
+	    Yylex altScanner = new Yylex(intermediaryFile);
+	    Symbol altToken = altScanner.next_token();
+            outFile.println(((StrLitTokenVal)altToken.value).strVal);    	
+	}else{
+	    outFile.println("failed to ignore characters");
+	}
+	    outFile.close();
+    }
+
+    private static void testEmptyFile() throws IOException{
+	FileReader inFile = null;
+	try{
+	    inFile = new FileReader("emptyFile.in");
+	} catch (FileNotFoundException ex){
+	    System.err.println("File emptyFile.in");
+	    System.exit(-1);
+	}
+
+	Yylex scanner = new Yylex(inFile);
+	Symbol eofToken = scanner.next_token();
+	if(eofToken.sym != sym.EOF){
+		System.err.println("Try to read non-existent symbols from emptyFile.in");
+	}
+    }
     private static void testBadInput() throws IOException{
 	FileReader inFile = null;
         PrintWriter outFile = null;
@@ -176,16 +251,6 @@ public class P2 {
 	}
 	outFile.close();
     }
-/*	
-    private static void testCharacterNumbers(){
-	Yylex scanner = new Yylex(); //Needs an input file
-    }
-
-    private static void testAssociatedValues(){
-	Yylex scanner = new Yylex(); //Needs an input file
-    }
-
-*/
 
     /**
      * testAllTokens

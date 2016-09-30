@@ -7,3 +7,9 @@ abc
 "yeeeeeeee
 
 "it's fine"
+
+"unterminated string (eof)
+
+bad_$identifier
+
+

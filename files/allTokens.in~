@@ -1,15 +1,11 @@
 123
 +
 x
-<<<<<<< HEAD
-
-=======
->>>>>>> moving changes to ScottsBranch
-ass
+hello
 =
-boob
+my
 +
-poop
+world
 ;
 {
 }
@@ -36,11 +32,6 @@ g
 <<
 ++
 "feeed me"
-<<<<<<< HEAD
-"feeeeed me
-
-=======
->>>>>>> moving changes to ScottsBranch
 bool
 int
 void
@@ -58,9 +49,3 @@ five
 =
 10
 ;
-<<<<<<< HEAD
-
-=======
-//This is a Comment
-#This is also a Comment
->>>>>>> moving changes to ScottsBranch

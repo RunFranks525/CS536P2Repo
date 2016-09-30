@@ -265,7 +265,6 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 11 */ YY_NO_ANCHOR,
 		/* 12 */ YY_NO_ANCHOR,
 		/* 13 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
 		/* 14 */ YY_NOT_ACCEPT,
 		/* 15 */ YY_NO_ANCHOR,
 		/* 16 */ YY_NO_ANCHOR,
@@ -275,21 +274,6 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 20 */ YY_NO_ANCHOR,
 		/* 21 */ YY_NO_ANCHOR,
 		/* 22 */ YY_NO_ANCHOR,
-=======
-		/* 14 */ YY_NO_ANCHOR,
-		/* 15 */ YY_NO_ANCHOR,
-		/* 16 */ YY_NOT_ACCEPT,
-		/* 17 */ YY_NO_ANCHOR,
-		/* 18 */ YY_NO_ANCHOR,
-		/* 19 */ YY_NO_ANCHOR,
-		/* 20 */ YY_NOT_ACCEPT,
-		/* 21 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
-		/* 22 */ YY_NOT_ACCEPT,
->>>>>>> moving changes to ScottsBranch
-=======
-		/* 22 */ YY_NO_ANCHOR,
->>>>>>> modified some comment regex
 		/* 23 */ YY_NO_ANCHOR,
 		/* 24 */ YY_NOT_ACCEPT,
 		/* 25 */ YY_NO_ANCHOR,
@@ -321,10 +305,8 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 51 */ YY_NO_ANCHOR,
 		/* 52 */ YY_NO_ANCHOR,
 		/* 53 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
 		/* 54 */ YY_NO_ANCHOR,
 		/* 55 */ YY_NO_ANCHOR,
-<<<<<<< HEAD
 		/* 56 */ YY_NO_ANCHOR,
 		/* 57 */ YY_NO_ANCHOR,
 		/* 58 */ YY_NO_ANCHOR,
@@ -361,61 +343,6 @@ class Yylex implements java_cup.runtime.Scanner {
 "-1:6,52,39:2,-1:13,52,41,52:15,-1:6,52,39:2,-1:13,52:10,42,52:6,-1:6,52,39:" +
 "2,-1:13,52:12,44,52:4,-1:6,52,39:2,-1:13,52:5,45,52:11,-1:6,52,39:2,-1:13,5" +
 "2:16,47,-1:6,52,39:2,-1:12");
-=======
-		/* 56 */ YY_NO_ANCHOR
-=======
-		/* 54 */ YY_NO_ANCHOR
->>>>>>> modified some comment regex
-	};
-	private int yy_cmap[] = unpackFromString(1,130,
-"38:9,26,22,38:2,19,38:18,26,34,18,28,38:2,35,21,29:3,32,29,33,29,27,25:10,3" +
-"8,29,30,37,31,21,38,24:26,38,20,38:2,24,38,13,1,15,8,11,12,23,17,4,23:2,3,2" +
-"3,5,2,23:2,9,14,6,10,7,16,23:3,29,36,29,38:2,0:2")[0];
-
-	private int yy_rmap[] = unpackFromString(1,55,
-"0,1,2,3,1,4,5,6,7,1:3,3,8,1:2,9,10,11,12,11,13,14,15,16,17,18,19,20,21,22,2" +
-"3,24,7,25,26,27,28,29,30,31,32,33,34,35,36,7,37,38,39,40,29,41,42,43")[0];
-
-	private int yy_nxt[][] = unpackFromString(44,39,
-<<<<<<< HEAD
-"1,2,48:2,13,48,50,51,48,52,48,53,54,48,55,33,56,48,3,-1,14:2,4,48:3,5,6,7,2" +
-"0,15,21,25,28,30,32,24,27,32,-1:40,48,34,48:15,-1:5,35,48,35:2,-1:13,12:17," +
-"9,12,18,12,10,17,12:4,-1,12:10,-1:26,5,-1:39,6,-1:39,22,-1:11,48:17,-1:5,35" +
-",48,35:2,-1:13,48:4,19,48:6,8,48:5,-1:5,35,48,35:2,-1:13,12:17,16,12,18,12," +
-"10,17,12:4,-1,12:10,-1,48:5,8,48:11,-1:5,35,48,35:2,-1:13,22:21,11,22:16,-1" +
-":31,15,-1:6,15,-1,48:4,8,48:12,-1:5,35,48,35:2,-1:48,15,-1:34,15,-1:5,15,-1" +
-",48:2,8,48:14,-1:5,35,48,35:2,-1:49,15,-1:34,15,-1:6,48:10,8,48:6,-1:5,35,4" +
-"8,35:2,-1:46,15,-1:5,48:7,8,48:9,-1:5,35,48,35:2,-1:50,15,-1,48,42,48,23,48" +
-":13,-1:5,35,48,35:2,-1:13,48,26,48:15,-1:5,35,48,35:2,-1:13,48:9,29,48:7,-1" +
-":5,35,48,35:2,-1:13,48:3,31,48:13,-1:5,35,48,35:2,-1:13,48:5,44,48:11,-1:5," +
-"35,48,35:2,-1:13,48:13,29,48:3,-1:5,35,48,35:2,-1:13,48:2,39,48:14,-1:5,35," +
-"48,35:2,-1:13,48:8,49,48:8,-1:5,35,48,35:2,-1:13,48:9,19,48:7,-1:5,35,48,35" +
-":2,-1:13,48:3,45,48:13,-1:5,35,48,35:2,-1:13,48:9,46,48:7,-1:5,35,48,35:2,-" +
-"1:13,48:2,29,48:14,-1:5,35,48,35:2,-1:13,48:8,23,48:8,-1:5,35,48,35:2,-1:13" +
-",48:14,19,48:2,-1:5,35,48,35:2,-1:13,48:9,47,48:7,-1:5,35,48,35:2,-1:13,48:" +
-"8,36,48:8,-1:5,35,48,35:2,-1:13,48,37,48:15,-1:5,35,48,35:2,-1:13,48:10,38," +
-"48:6,-1:5,35,48,35:2,-1:13,48:12,40,48:4,-1:5,35,48,35:2,-1:13,48:5,41,48:1" +
-"1,-1:5,35,48,35:2,-1:13,48:16,43,-1:5,35,48,35:2,-1:12");
->>>>>>> moving changes to ScottsBranch
-=======
-"1,2,46:2,13,46,48,49,46,50,46,51,52,46,53,31,54,46,3,-1,14:2,4,46:2,5,6,7,1" +
-"8,15,19,23,26,28,30,22,25,30,14,-1:40,46,32,46:15,-1:5,46,33:2,-1:14,12:17," +
-"9,12,16,12,10,12:4,-1,12:11,-1:25,5,-1:39,6,-1:39,20,-1:12,46:17,-1:5,46,33" +
-":2,-1:14,46:4,17,46:6,8,46:5,-1:5,46,33:2,-1:18,12:2,-1:11,12,-1,12:2,-1:18" +
-",46:5,8,46:11,-1:5,46,33:2,-1:14,20:21,11,20:16,-1:30,15,-1:6,15,-1:2,46:4," +
-"8,46:12,-1:5,46,33:2,-1:48,15,-1:34,15,-1:5,15,-1:2,46:2,8,46:14,-1:5,46,33" +
-":2,-1:49,15,-1:34,15,-1:7,46:10,8,46:6,-1:5,46,33:2,-1:46,15,-1:6,46:7,8,46" +
-":9,-1:5,46,33:2,-1:50,15,-1:2,46,40,46,21,46:13,-1:5,46,33:2,-1:14,46,24,46" +
-":15,-1:5,46,33:2,-1:14,46:9,27,46:7,-1:5,46,33:2,-1:14,46:3,29,46:13,-1:5,4" +
-"6,33:2,-1:14,46:5,42,46:11,-1:5,46,33:2,-1:14,46:13,27,46:3,-1:5,46,33:2,-1" +
-":14,46:2,37,46:14,-1:5,46,33:2,-1:14,46:8,47,46:8,-1:5,46,33:2,-1:14,46:9,1" +
-"7,46:7,-1:5,46,33:2,-1:14,46:3,43,46:13,-1:5,46,33:2,-1:14,46:9,44,46:7,-1:" +
-"5,46,33:2,-1:14,46:2,27,46:14,-1:5,46,33:2,-1:14,46:8,21,46:8,-1:5,46,33:2," +
-"-1:14,46:14,17,46:2,-1:5,46,33:2,-1:14,46:9,45,46:7,-1:5,46,33:2,-1:14,46:8" +
-",34,46:8,-1:5,46,33:2,-1:14,46,35,46:15,-1:5,46,33:2,-1:14,46:10,36,46:6,-1" +
-":5,46,33:2,-1:14,46:12,38,46:4,-1:5,46,33:2,-1:14,46:5,39,46:11,-1:5,46,33:" +
-"2,-1:14,46:16,41,-1:5,46,33:2,-1:13");
->>>>>>> modified some comment regex
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -484,36 +411,6 @@ return new Symbol(sym.EOF);
 					case -4:
 						break;
 					case 4:
-<<<<<<< HEAD
-=======
-						{ CharNum.num = 1; }
-					case -5:
-						break;
-					case 5:
-						{  
-            	double bigVal = (new Double(yytext())).doubleValue();
-		Symbol S = null;
-		if (bigVal > Integer.MAX_VALUE) {
-			ErrMsg.warn(yyline+1, CharNum.num, "integer literal too large; using max value");
-			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, Integer.MAX_VALUE);
-			S = new Symbol(sym.INTLITERAL, intLitToken);
-            		CharNum.num += yytext().length();
-		} else {
-			int val = (new Integer(yytext())).intValue();
-			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
-            		S = new Symbol(sym.INTLITERAL,intLitToken);
-            		CharNum.num += yytext().length();
-		}
-            	return S;
-          }
-					case -6:
-						break;
-					case 6:
-						{ CharNum.num += yytext().length(); }
-					case -7:
-						break;
-					case 7:
->>>>>>> moving changes to ScottsBranch
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -658,19 +555,19 @@ return new Symbol(sym.EOF);
 					case 6:
 						{  
             	double bigVal = (new Double(yytext())).doubleValue();
-			System.out.println("fuck you");
-		if(bigVal > Integer.MAX_VALUE) {
-			ErrMsg.warn(yyline+1, CharNum.num,
-                         "integer overflow, exceeds " + Integer.MAX_VALUE);
+		Symbol S = null;
+		if (bigVal > Integer.MAX_VALUE) {
+			ErrMsg.warn(yyline+1, CharNum.num, "integer literal too large; using max value");
+			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, Integer.MAX_VALUE);
+			S = new Symbol(sym.INTLITERAL, intLitToken);
             		CharNum.num += yytext().length();
-		} else{
-			System.out.println("fuck you");
+		} else {
 			int val = (new Integer(yytext())).intValue();
 			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
-            		Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
+            		S = new Symbol(sym.INTLITERAL,intLitToken);
             		CharNum.num += yytext().length();
-            		return S;
 		}
+            	return S;
           }
 					case -7:
 						break;
@@ -797,11 +694,7 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-<<<<<<< HEAD
 					case -15:
-=======
-					case -13:
->>>>>>> moving changes to ScottsBranch
 						break;
 					case 16:
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
@@ -946,22 +839,7 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-<<<<<<< HEAD
 					case -17:
-=======
-					case -15:
-						break;
-<<<<<<< HEAD
-					case 16:
-						{	
-		String val = yytext();
-		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.STRINGLITERAL, strLitToken);
-		CharNum.num += yytext().length();
-		return S;
-	  }
-					case -16:
->>>>>>> moving changes to ScottsBranch
 						break;
 					case 18:
 						{	
@@ -969,52 +847,26 @@ return new Symbol(sym.EOF);
                          "unterminated string literal with bad escaped character ignored");
             		CharNum.num += yytext().length();
 	  }
-<<<<<<< HEAD
 					case -18:
 						break;
 					case 20:
-=======
-					case -17:
-						break;
-					case 19:
->>>>>>> moving changes to ScottsBranch
 						{	
-=======
-					case 17:
-						{	
->>>>>>> modified some comment regex
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, idToken);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-<<<<<<< HEAD
-<<<<<<< HEAD
 					case -19:
-=======
-					case -18:
->>>>>>> moving changes to ScottsBranch
 						break;
 					case 21:
-=======
-					case -16:
-						break;
-					case 18:
->>>>>>> modified some comment regex
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
                          "illegal character ignored: " + yytext());
             CharNum.num++;
           }
-<<<<<<< HEAD
 					case -20:
 						break;
 					case 22:
-=======
-					case -17:
-						break;
-					case 19:
->>>>>>> modified some comment regex
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -1150,13 +1002,9 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-<<<<<<< HEAD
 					case -21:
-=======
-					case -18:
->>>>>>> modified some comment regex
 						break;
-					case 21:
+					case 23:
 						{	
 		ErrMsg.fatal(yyline+1, CharNum.num,
                          "unterminated string literal with bad escaped character ignored");
@@ -1172,28 +1020,16 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-<<<<<<< HEAD
 					case -23:
 						break;
 					case 26:
-=======
-					case -19:
-						break;
-					case 22:
->>>>>>> modified some comment regex
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
                          "illegal character ignored: " + yytext());
             CharNum.num++;
           }
-<<<<<<< HEAD
 					case -24:
 						break;
 					case 27:
-=======
-					case -20:
-						break;
-					case 23:
->>>>>>> modified some comment regex
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -1329,15 +1165,9 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-<<<<<<< HEAD
 					case -25:
 						break;
 					case 29:
-=======
-					case -21:
-						break;
-					case 24:
->>>>>>> modified some comment regex
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -1345,28 +1175,16 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-<<<<<<< HEAD
 					case -26:
 						break;
 					case 30:
-=======
-					case -22:
-						break;
-					case 25:
->>>>>>> modified some comment regex
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
                          "illegal character ignored: " + yytext());
             CharNum.num++;
           }
-<<<<<<< HEAD
 					case -27:
 						break;
 					case 31:
-=======
-					case -23:
-						break;
-					case 26:
->>>>>>> modified some comment regex
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -1502,15 +1320,9 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-<<<<<<< HEAD
 					case -28:
 						break;
 					case 33:
-=======
-					case -24:
-						break;
-					case 27:
->>>>>>> modified some comment regex
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -1518,15 +1330,9 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-<<<<<<< HEAD
 					case -29:
 						break;
 					case 34:
-=======
-					case -25:
-						break;
-					case 28:
->>>>>>> modified some comment regex
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -1662,15 +1468,9 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-<<<<<<< HEAD
 					case -30:
 						break;
 					case 35:
-=======
-					case -26:
-						break;
-					case 29:
->>>>>>> modified some comment regex
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -1678,15 +1478,9 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
-<<<<<<< HEAD
 					case -31:
 						break;
 					case 36:
-=======
-					case -27:
-						break;
-					case 30:
->>>>>>> modified some comment regex
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -1822,49 +1616,6 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-<<<<<<< HEAD
-=======
-					case -28:
-						break;
-					case 31:
-						{	
-		String val = yytext().toString();
-		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, idToken);
-		CharNum.num += yytext().length();
-		return S;
-	     }
-					case -29:
-						break;
-					case 32:
-						{	
-		String val = yytext().toString();
-		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, idToken);
-		CharNum.num += yytext().length();
-		return S;
-	     }
-					case -30:
-						break;
-					case 33:
-						{	
-		String val = yytext().toString();
-		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, idToken);
-		CharNum.num += yytext().length();
-		return S;
-	     }
-					case -31:
-						break;
-					case 34:
-						{	
-		String val = yytext().toString();
-		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
-		Symbol S = new Symbol(sym.ID, idToken);
-		CharNum.num += yytext().length();
-		return S;
-	     }
->>>>>>> modified some comment regex
 					case -32:
 						break;
 					case 37:
@@ -2067,7 +1818,6 @@ return new Symbol(sym.EOF);
 	     }
 					case -52:
 						break;
-<<<<<<< HEAD
 					case 57:
 						{	
 		String val = yytext().toString();
@@ -2088,7 +1838,6 @@ return new Symbol(sym.EOF);
 	     }
 					case -54:
 						break;
-<<<<<<< HEAD
 					case 59:
 						{	
 		String val = yytext().toString();
@@ -2109,10 +1858,6 @@ return new Symbol(sym.EOF);
 	     }
 					case -56:
 						break;
-=======
->>>>>>> moving changes to ScottsBranch
-=======
->>>>>>> modified some comment regex
 					default:
 						yy_error(YY_E_INTERNAL,false);
 					case -1:

@@ -1,11 +1,7 @@
 123
 +
 x
-ass
-=
-boob
-+
-poop
+hello = my + world
 ;
 {
 }
@@ -49,5 +45,3 @@ five
 =
 10
 ;
-//This is a Comment
-#This is also a Comment
