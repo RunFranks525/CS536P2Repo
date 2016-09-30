@@ -82,11 +82,7 @@ return new Symbol(sym.EOF);
 %%
 
 (bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(else)|(while)|(return) {
-
-
-
 		String reservedWord = yytext();
-
 		Symbol S = null;
 		TokenVal reservedWordToken = null;
 		switch (reservedWord) {
@@ -182,9 +178,6 @@ return new Symbol(sym.EOF);
             		CharNum.num += yytext().length();
 	  }
 
-
-
-
 ([a-z]|[A-Z]|_)([a-z]|[A-Z]|[0-9]|_)* {	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -195,19 +188,19 @@ return new Symbol(sym.EOF);
 
 {DIGIT}+  {  
             	double bigVal = (new Double(yytext())).doubleValue();
-			System.out.println("fuck you");
-		if(bigVal > Integer.MAX_VALUE) {
-			ErrMsg.warn(yyline+1, CharNum.num,
-                         "integer overflow, exceeds " + Integer.MAX_VALUE);
+		Symbol S = null;
+		if (bigVal > Integer.MAX_VALUE) {
+			ErrMsg.warn(yyline+1, CharNum.num, "integer literal too large; using max value");
+			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, Integer.MAX_VALUE);
+			S = new Symbol(sym.INTLITERAL, intLitToken);
             		CharNum.num += yytext().length();
-		} else{
-			System.out.println("fuck you");
+		} else {
 			int val = (new Integer(yytext())).intValue();
 			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
-            		Symbol S = new Symbol(sym.INTLITERAL,intLitToken);
+            		S = new Symbol(sym.INTLITERAL,intLitToken);
             		CharNum.num += yytext().length();
-            		return S;
 		}
+            	return S;
           }
 
 \n        { CharNum.num = 1; }

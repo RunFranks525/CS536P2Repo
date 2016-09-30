@@ -1,4 +1,5 @@
 2147483650
+<<<<<<< HEAD
 
 "very bad string \
 abc
@@ -9,3 +10,6 @@ abc
 
 "it's fine"
 
+=======
+@$
+>>>>>>> moving changes to ScottsBranch

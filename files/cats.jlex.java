@@ -265,6 +265,7 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 11 */ YY_NO_ANCHOR,
 		/* 12 */ YY_NO_ANCHOR,
 		/* 13 */ YY_NO_ANCHOR,
+<<<<<<< HEAD
 		/* 14 */ YY_NOT_ACCEPT,
 		/* 15 */ YY_NO_ANCHOR,
 		/* 16 */ YY_NO_ANCHOR,
@@ -274,6 +275,17 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 20 */ YY_NO_ANCHOR,
 		/* 21 */ YY_NO_ANCHOR,
 		/* 22 */ YY_NO_ANCHOR,
+=======
+		/* 14 */ YY_NO_ANCHOR,
+		/* 15 */ YY_NO_ANCHOR,
+		/* 16 */ YY_NO_ANCHOR,
+		/* 17 */ YY_NO_ANCHOR,
+		/* 18 */ YY_NOT_ACCEPT,
+		/* 19 */ YY_NO_ANCHOR,
+		/* 20 */ YY_NO_ANCHOR,
+		/* 21 */ YY_NO_ANCHOR,
+		/* 22 */ YY_NOT_ACCEPT,
+>>>>>>> moving changes to ScottsBranch
 		/* 23 */ YY_NO_ANCHOR,
 		/* 24 */ YY_NOT_ACCEPT,
 		/* 25 */ YY_NO_ANCHOR,
@@ -307,6 +319,7 @@ class Yylex implements java_cup.runtime.Scanner {
 		/* 53 */ YY_NO_ANCHOR,
 		/* 54 */ YY_NO_ANCHOR,
 		/* 55 */ YY_NO_ANCHOR,
+<<<<<<< HEAD
 		/* 56 */ YY_NO_ANCHOR,
 		/* 57 */ YY_NO_ANCHOR,
 		/* 58 */ YY_NO_ANCHOR,
@@ -343,6 +356,38 @@ class Yylex implements java_cup.runtime.Scanner {
 "-1:6,52,39:2,-1:13,52,41,52:15,-1:6,52,39:2,-1:13,52:10,42,52:6,-1:6,52,39:" +
 "2,-1:13,52:12,44,52:4,-1:6,52,39:2,-1:13,52:5,45,52:11,-1:6,52,39:2,-1:13,5" +
 "2:16,47,-1:6,52,39:2,-1:12");
+=======
+		/* 56 */ YY_NO_ANCHOR
+	};
+	private int yy_cmap[] = unpackFromString(1,130,
+"21:9,27,22,21:2,19,21:18,27,35,18,29,21:2,36,21,30:3,33,30,34,30,28,26:10,2" +
+"1,30,31,38,32,21:2,25:25,23,21,20,21:2,25,21,13,1,15,8,11,12,24,17,4,24:2,3" +
+",24,5,2,24:2,9,14,6,10,7,16,24:3,30,37,30,21:2,0:2")[0];
+
+	private int yy_rmap[] = unpackFromString(1,57,
+"0,1,2,3,1,4,5,6,7,1:3,3,8,1:2,3:2,9,10,11,12,11,13,14,15,16,17,18,19,20,21," +
+"22,23,24,7,25,26,27,28,29,30,31,32,33,34,35,36,7,37,38,39,40,29,41,42,43")[0];
+
+	private int yy_nxt[][] = unpackFromString(44,39,
+"1,2,48:2,13,48,50,51,48,52,48,53,54,48,55,33,56,48,3,-1,14:2,4,48:3,5,6,7,2" +
+"0,15,21,25,28,30,32,24,27,32,-1:40,48,34,48:15,-1:5,35,48,35:2,-1:13,12:17," +
+"9,12,18,12,10,17,12:4,-1,12:10,-1:26,5,-1:39,6,-1:39,22,-1:11,48:17,-1:5,35" +
+",48,35:2,-1:13,48:4,19,48:6,8,48:5,-1:5,35,48,35:2,-1:13,12:17,16,12,18,12," +
+"10,17,12:4,-1,12:10,-1,48:5,8,48:11,-1:5,35,48,35:2,-1:13,22:21,11,22:16,-1" +
+":31,15,-1:6,15,-1,48:4,8,48:12,-1:5,35,48,35:2,-1:48,15,-1:34,15,-1:5,15,-1" +
+",48:2,8,48:14,-1:5,35,48,35:2,-1:49,15,-1:34,15,-1:6,48:10,8,48:6,-1:5,35,4" +
+"8,35:2,-1:46,15,-1:5,48:7,8,48:9,-1:5,35,48,35:2,-1:50,15,-1,48,42,48,23,48" +
+":13,-1:5,35,48,35:2,-1:13,48,26,48:15,-1:5,35,48,35:2,-1:13,48:9,29,48:7,-1" +
+":5,35,48,35:2,-1:13,48:3,31,48:13,-1:5,35,48,35:2,-1:13,48:5,44,48:11,-1:5," +
+"35,48,35:2,-1:13,48:13,29,48:3,-1:5,35,48,35:2,-1:13,48:2,39,48:14,-1:5,35," +
+"48,35:2,-1:13,48:8,49,48:8,-1:5,35,48,35:2,-1:13,48:9,19,48:7,-1:5,35,48,35" +
+":2,-1:13,48:3,45,48:13,-1:5,35,48,35:2,-1:13,48:9,46,48:7,-1:5,35,48,35:2,-" +
+"1:13,48:2,29,48:14,-1:5,35,48,35:2,-1:13,48:8,23,48:8,-1:5,35,48,35:2,-1:13" +
+",48:14,19,48:2,-1:5,35,48,35:2,-1:13,48:9,47,48:7,-1:5,35,48,35:2,-1:13,48:" +
+"8,36,48:8,-1:5,35,48,35:2,-1:13,48,37,48:15,-1:5,35,48,35:2,-1:13,48:10,38," +
+"48:6,-1:5,35,48,35:2,-1:13,48:12,40,48:4,-1:5,35,48,35:2,-1:13,48:5,41,48:1" +
+"1,-1:5,35,48,35:2,-1:13,48:16,43,-1:5,35,48,35:2,-1:12");
+>>>>>>> moving changes to ScottsBranch
 
 	public java_cup.runtime.Symbol next_token ()
 		throws java.io.IOException {
@@ -411,6 +456,36 @@ return new Symbol(sym.EOF);
 					case -4:
 						break;
 					case 4:
+<<<<<<< HEAD
+=======
+						{ CharNum.num = 1; }
+					case -5:
+						break;
+					case 5:
+						{  
+            	double bigVal = (new Double(yytext())).doubleValue();
+		Symbol S = null;
+		if (bigVal > Integer.MAX_VALUE) {
+			ErrMsg.warn(yyline+1, CharNum.num, "integer literal too large; using max value");
+			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, Integer.MAX_VALUE);
+			S = new Symbol(sym.INTLITERAL, intLitToken);
+            		CharNum.num += yytext().length();
+		} else {
+			int val = (new Integer(yytext())).intValue();
+			IntLitTokenVal intLitToken = new IntLitTokenVal(yyline+1, CharNum.num, val);
+            		S = new Symbol(sym.INTLITERAL,intLitToken);
+            		CharNum.num += yytext().length();
+		}
+            	return S;
+          }
+					case -6:
+						break;
+					case 6:
+						{ CharNum.num += yytext().length(); }
+					case -7:
+						break;
+					case 7:
+>>>>>>> moving changes to ScottsBranch
 						{ 
 	    String reservedSymbol = yytext().toString();
 	    Symbol S = null;
@@ -694,7 +769,11 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
+<<<<<<< HEAD
 					case -15:
+=======
+					case -13:
+>>>>>>> moving changes to ScottsBranch
 						break;
 					case 16:
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
@@ -839,7 +918,21 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
+<<<<<<< HEAD
 					case -17:
+=======
+					case -15:
+						break;
+					case 16:
+						{	
+		String val = yytext();
+		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
+		Symbol S = new Symbol(sym.STRINGLITERAL, strLitToken);
+		CharNum.num += yytext().length();
+		return S;
+	  }
+					case -16:
+>>>>>>> moving changes to ScottsBranch
 						break;
 					case 18:
 						{	
@@ -847,9 +940,15 @@ return new Symbol(sym.EOF);
                          "unterminated string literal with bad escaped character ignored");
             		CharNum.num += yytext().length();
 	  }
+<<<<<<< HEAD
 					case -18:
 						break;
 					case 20:
+=======
+					case -17:
+						break;
+					case 19:
+>>>>>>> moving changes to ScottsBranch
 						{	
 		String val = yytext().toString();
 		IdTokenVal idToken = new IdTokenVal(yyline+1, CharNum.num, val);
@@ -857,7 +956,11 @@ return new Symbol(sym.EOF);
 		CharNum.num += yytext().length();
 		return S;
 	     }
+<<<<<<< HEAD
 					case -19:
+=======
+					case -18:
+>>>>>>> moving changes to ScottsBranch
 						break;
 					case 21:
 						{ ErrMsg.fatal(yyline+1, CharNum.num,
@@ -1838,6 +1941,7 @@ return new Symbol(sym.EOF);
 	     }
 					case -54:
 						break;
+<<<<<<< HEAD
 					case 59:
 						{	
 		String val = yytext().toString();
@@ -1858,6 +1962,8 @@ return new Symbol(sym.EOF);
 	     }
 					case -56:
 						break;
+=======
+>>>>>>> moving changes to ScottsBranch
 					default:
 						yy_error(YY_E_INTERNAL,false);
 					case -1:

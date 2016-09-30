@@ -2,6 +2,9 @@
 +
 x
 <<<<<<< HEAD
+
+=======
+>>>>>>> moving changes to ScottsBranch
 ass
 =
 boob
@@ -33,8 +36,11 @@ g
 <<
 ++
 "feeed me"
+<<<<<<< HEAD
 "feeeeed me
+
 =======
+>>>>>>> moving changes to ScottsBranch
 bool
 int
 void
@@ -52,4 +58,9 @@ five
 =
 10
 ;
->>>>>>> Did some fuckin poo poo stuff
+<<<<<<< HEAD
+
+=======
+//This is a Comment
+#This is also a Comment
+>>>>>>> moving changes to ScottsBranch

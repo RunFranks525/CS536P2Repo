@@ -1,7 +1,6 @@
 123
 +
 x
-
 ass
 =
 boob
@@ -33,8 +32,6 @@ g
 <<
 ++
 "feeed me"
-"feeeeed me
-
 bool
 int
 void
@@ -52,4 +49,5 @@ five
 =
 10
 ;
-
+//This is a Comment
+#This is also a Comment
