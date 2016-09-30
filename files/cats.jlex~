@@ -65,9 +65,9 @@ RESERVEDWORD = [(bool)|(int)|(void)|(true)|(false)|(struct)|(cin)|(cout)|(if)|(e
 
 IDENTIFIER =   [((a-z)(A-Z)_)|((a-z)(A-Z)(0-9)_)*]
 
-STRING =       [\"([^\n\"\/]|(\\[nt\'\"\?\\]))*\"]
+STRING =       [\"(\[^\n\"\/\]|(\\\[nt\'\"\?\\\]))*\"]
 
-COMMENT =     [((//)[^\n]*\n)|((#)[^\n]*\n)]
+COMMENT =     [((//)\[^\n\]*\n)|((#)\[^\n\]*\n)]
 
 SYMBOLS =      [\{|\}|\(|\)|;|,|\.|(<<)|(>>)|(\+\+)|(--)|\+|-|\*|/|!|(&&)|(\|\|)|(==)|(!=)|<|>|(<=)|(>=)|=]
 
@@ -88,9 +88,10 @@ return new Symbol(sym.EOF);
 {RESERVEDWORD} {
 		String reservedWord = yytext().toString();
 		Symbol S = null;
-		switch(reservedWord){
+		TokenVal reservedWordToken = null;
+		switch (reservedWord) {
 		   case "bool":
-			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
+			reservedWordToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.BOOL,  reservedWordToken);
 			CharNum.num += yytext().length();	
 			break;
@@ -103,7 +104,7 @@ return new Symbol(sym.EOF);
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.VOID,  reservedWordToken);
 			CharNum.num += yytext().length();		
-			break:
+			break;
 		   case "true":
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.TRUE,  reservedWordToken);
@@ -150,15 +151,12 @@ return new Symbol(sym.EOF);
 			CharNum.num += yytext().length();
 			break;
 		   default:
-			break;
 			
 		}
 		return S;				
 	}
 
 {STRING}  {
-		//TODO: Unterminated String Literals
-		//TODO: Bad String Literals
 		String val = yyText().toString();
 		StrLitTokenVal strLitToken = new StrLitTokenVal(yyline+1, CharNum.num, val);
 		Symbol S = new Symbol(sym.ID, strLitTokenVal);
@@ -214,7 +212,7 @@ return new Symbol(sym.EOF);
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.LPAREN,  reservedWordToken);
 			CharNum.num++;		
-			break:
+			break;
 		case ")":
 			TokenVal reservedWordToken = new TokenVal(yyline+1, CharNum.num);
 			S = new Symbol(sym.RPAREN,  reservedWordToken);
@@ -330,8 +328,7 @@ return new Symbol(sym.EOF);
 	    }
             return S;
           }
-
-//If we havent caught the token yet, program fails     
+    
 .         { ErrMsg.fatal(yyline+1, CharNum.num,
                          "illegal character ignored: " + yytext());
             CharNum.num++;

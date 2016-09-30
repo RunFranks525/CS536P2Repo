@@ -32,7 +32,7 @@ public class P2 {
     }
 
     private static void testBadInput(){
-	Yylex scanner = new Yylex(); //Needs an input file
+	Yylex scanner = new Yylex(); //Needs an input file with bad input
 	
     }
 	
